@@ -50,15 +50,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExchangeServiceBuilder.cs" />
-    <Compile Include="ExchangeClient.cs" />
-    <Compile Include="ExchangeSettings.cs" />
-    <Compile Include="IExchangeClient.cs" />
+    <Compile Include="Exchange\ExchangeServiceBuilder.cs" />
+    <Compile Include="Exchange\ExchangeClient.cs" />
+    <Compile Include="ApplicationSettings.cs" />
+    <Compile Include="Exchange\IExchangeClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
