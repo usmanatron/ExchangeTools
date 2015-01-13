@@ -1,42 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Exchange.WebServices.Data;
 
 namespace ExchangeOofScheduler.Core
 {
-  public class ExchangeClient
+  public class ExchangeClient : IExchangeClient
   {
-    public void Test()
+    private readonly ExchangeService exchangeService;
+    private readonly ExchangeSettings settings;
+
+    public ExchangeClient(ExchangeServiceBuilder exchangeServiceBuilder, ExchangeSettings settings)
     {
-      var service = new ExchangeService(ExchangeVersion.Exchange2013_SP1);
-      service.UseDefaultCredentials = true;
-      service.AutodiscoverUrl("usman.iqbal@softwire.com", RedirectionUrlValidationCallback);
-
-      service.TraceEnabled = true;
-      service.TraceFlags = TraceFlags.All;
-
-      var a = service.GetUserOofSettings("usman.iqbal@softwire.com");
-      Console.WriteLine(a);
+      this.settings = settings;
+      this.exchangeService = exchangeServiceBuilder
+        .WithEmail(settings.userEmail)
+        .WithTracingEnabled()
+        .Build();
     }
 
-    private static bool RedirectionUrlValidationCallback(string redirectionUrl)
+    public OofSettings GetOofSettings()
     {
-      // The default for the validation callback is to reject the URL.
-      bool result = false;
+      return exchangeService.GetUserOofSettings(settings.userEmail);
+    }
 
-      Uri redirectionUri = new Uri(redirectionUrl);
-
-      // Validate the contents of the redirection URL. In this simple validation
-      // callback, the redirection URL is considered valid if it is using HTTPS
-      // to encrypt the authentication credentials. 
-      if (redirectionUri.Scheme == "https")
-      {
-        result = true;
-      }
-      return result;
+    public bool TrySetOofSettings()
+    {
+      throw new NotImplementedException();
     }
   }
 }
