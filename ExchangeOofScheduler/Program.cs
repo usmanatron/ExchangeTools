@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ExchangeOofScheduler.Core;
+﻿using ExchangeOofScheduler.Core;
+using Ninject;
 
 namespace ExchangeOofScheduler
 {
@@ -11,8 +7,19 @@ namespace ExchangeOofScheduler
   {
     static void Main(string[] args)
     {
-      new ExchangeClient().Test();
+      var kernel = SetupNinjectKernel();
+      new ExchangeSettings();
 
+      kernel.Get<IExchangeClient>().GetOofSettings();
+
+    }
+
+    private static StandardKernel SetupNinjectKernel()
+    {
+      var kernel = new StandardKernel();
+      kernel.Bind<IExchangeClient>().To<ExchangeClient>();
+      kernel.Bind<ExchangeSettings>().ToSelf().InSingletonScope();
+      return kernel;
     }
   }
 }

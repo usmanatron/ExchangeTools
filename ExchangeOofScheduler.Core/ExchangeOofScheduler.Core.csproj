@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="ExchangeServiceBuilder.cs" />
     <Compile Include="ExchangeClient.cs" />
+    <Compile Include="ExchangeSettings.cs" />
     <Compile Include="IExchangeClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
