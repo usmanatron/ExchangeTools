@@ -1,11 +1,10 @@
 ﻿using Microsoft.Exchange.WebServices.Data;
 
-namespace ExchangeOofScheduler.Core
+namespace ExchangeOofScheduler.Core.Exchange
 {
   public interface IExchangeClient
   {
     OofSettings GetOofSettings();
-
-    bool TrySetOofSettings();
+    void SetOofSettings(OofSettings oofSettings);
   }
 }

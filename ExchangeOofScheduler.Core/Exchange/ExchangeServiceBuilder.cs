@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Exchange.WebServices.Data;
 
-namespace ExchangeOofScheduler.Core
+namespace ExchangeOofScheduler.Core.Exchange
 {
   /// <summary>
   /// Handles setting up an Exchange Service connection.
@@ -31,10 +31,14 @@ namespace ExchangeOofScheduler.Core
       return this;
     }
 
-    public ExchangeServiceBuilder WithTracingEnabled()
+    public ExchangeServiceBuilder WithTracing(bool enableTracing)
     {
-      exchangeService.TraceEnabled = true;
-      exchangeService.TraceFlags = TraceFlags.All;
+      if (enableTracing)
+      {
+        exchangeService.TraceEnabled = true;
+        exchangeService.TraceFlags = TraceFlags.All; 
+      }
+
       return this;
     }
 
