@@ -24,8 +24,7 @@ namespace ExchangeOofScheduler.Core.Exchange
 
     public void SetOofSettings(OofSettings oofSettings)
     {
-      //For now, whilst we get everything else setup, we forcibly stop this part from happening!
-      //exchangeService.SetUserOofSettings(settings.userEmail, oofSettings);
+      exchangeService.SetUserOofSettings(settings.userEmail, oofSettings);
     }
   }
 }

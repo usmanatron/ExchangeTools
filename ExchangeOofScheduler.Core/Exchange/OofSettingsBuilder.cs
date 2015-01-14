@@ -1,4 +1,5 @@
-﻿using Microsoft.Exchange.WebServices.Data;
+﻿using System;
+using Microsoft.Exchange.WebServices.Data;
 
 namespace ExchangeOofScheduler.Core.Exchange
 {
@@ -15,7 +16,14 @@ namespace ExchangeOofScheduler.Core.Exchange
 
     public OofSettings Build()
     {
-      //qqUMI Fill this in once application settings is done!
+      var nextDateRange = applicationSettings.nextApplicableDateRangeForOof;
+      oofSettings.Duration = new TimeWindow(nextDateRange.Start, nextDateRange.End);
+      oofSettings.State = nextDateRange.HappeningNow 
+        ? OofState.Enabled
+        : OofState.Scheduled;
+      oofSettings.ExternalReply = new OofReply(applicationSettings.externalReply);
+      oofSettings.InternalReply = new OofReply(applicationSettings.internalReply);
+      oofSettings.ExternalAudience = applicationSettings.sendToExternalRecipients;
       return oofSettings;
     }
   }
