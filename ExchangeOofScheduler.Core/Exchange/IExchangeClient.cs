@@ -6,5 +6,6 @@ namespace ExchangeOofScheduler.Core.Exchange
   {
     OofSettings GetOofSettings();
     void SetOofSettings(OofSettings oofSettings);
+    void SendEmailToSelf(string subject, string body);
   }
 }

@@ -59,6 +59,7 @@
     <Compile Include="Exchange\IExchangeClient.cs" />
     <Compile Include="Exchange\OofSettingsBuilder.cs" />
     <Compile Include="OofAlreadyEnabledException.cs" />
+    <Compile Include="OofSetterExceptionHandler.cs" />
     <Compile Include="OutOfOfficeSetter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

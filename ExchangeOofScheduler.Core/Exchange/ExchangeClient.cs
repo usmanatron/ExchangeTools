@@ -26,5 +26,18 @@ namespace ExchangeOofScheduler.Core.Exchange
     {
       exchangeService.SetUserOofSettings(settings.userEmail, oofSettings);
     }
+
+    public void SendEmailToSelf(string subject, string body)
+    {
+      var message = new EmailMessage(exchangeService)
+              {
+                From = settings.userEmail,
+                Subject = subject,
+                Body = new MessageBody(BodyType.HTML, body)
+              };
+      message.ToRecipients.Add(settings.userEmail);
+      
+      message.Send();
+    }
   }
 }
