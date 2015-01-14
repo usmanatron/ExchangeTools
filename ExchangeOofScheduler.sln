@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeOofScheduler", "Exc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeOofScheduler.Core.Tests", "ExchangeOofScheduler.Core.Tests\ExchangeOofScheduler.Core.Tests.csproj", "{580C99AF-FFE2-4FE6-B182-DB9709B7C18C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeOofScheduler.Tests", "ExchangeOofScheduler.Tests\ExchangeOofScheduler.Tests.csproj", "{F9BA8DB0-9169-4652-B6A4-95B98E121A7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{580C99AF-FFE2-4FE6-B182-DB9709B7C18C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{580C99AF-FFE2-4FE6-B182-DB9709B7C18C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{580C99AF-FFE2-4FE6-B182-DB9709B7C18C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9BA8DB0-9169-4652-B6A4-95B98E121A7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9BA8DB0-9169-4652-B6A4-95B98E121A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9BA8DB0-9169-4652-B6A4-95B98E121A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9BA8DB0-9169-4652-B6A4-95B98E121A7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
