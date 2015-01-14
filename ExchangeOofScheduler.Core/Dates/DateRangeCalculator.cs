@@ -2,9 +2,6 @@
 
 namespace ExchangeOofScheduler.Core.Dates
 {
-  /// <remarks>
-  /// Ideas taken from http://stackoverflow.com/questions/6346119/datetime-get-next-tuesday
-  /// </remarks>
   public class DateRangeCalculator
   {
     /// <remarks>

@@ -7,7 +7,7 @@ namespace ExchangeOofScheduler
 {
   class Program
   {
-    static void Main(string[] args)
+    static void Main()
     {
       var kernel = SetupNinjectKernel();
 

@@ -1,6 +1,5 @@
 ﻿using ExchangeOofScheduler.Core.Exchange;
 using Microsoft.Exchange.WebServices.Data;
-using System;
 
 namespace ExchangeOofScheduler.Core
 {

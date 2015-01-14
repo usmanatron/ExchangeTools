@@ -8,7 +8,7 @@ namespace ExchangeOofScheduler.Core
 {
   public class ApplicationSettings
   {
-    private NameValueCollection applicationSettings;
+    private readonly NameValueCollection applicationSettings;
     private readonly DayOfWeekReader DayOfWeekReader;
     private readonly DateRangeCalculator dateRangeCalculator;
 

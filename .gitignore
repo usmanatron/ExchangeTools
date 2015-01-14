@@ -194,3 +194,7 @@ FakesAssemblies/
 
 # nuget packages
 packages/
+
+# NCrunch
+*.ncrunchproject
+*.ncrunchsolution
