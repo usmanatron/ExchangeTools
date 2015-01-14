@@ -26,7 +26,7 @@ namespace ExchangeOofScheduler.Core.Dates
         case "fr":
           return DayOfWeek.Friday;
         default:
-          throw new ArgumentException("The given day of week (" + input + ") is not expected - please check and retry.");
+          throw new InvalidOperationException("The given day of week (" + input + ") is not expected - please check and retry.");
       }
     }
   }

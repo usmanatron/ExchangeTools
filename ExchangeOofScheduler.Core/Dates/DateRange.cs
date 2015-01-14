@@ -10,6 +10,12 @@ namespace ExchangeOofScheduler.Core.Dates
 
     public DateRange(DateTime start, DateTime end)
     {
+      if (start > end)
+      {
+        var message = string.Format("The Start date given ({0}) occurs after the end date! ({1})", start, end);
+        throw new ArgumentException(message);
+      }
+
       this.Start = start;
       this.End = end;
       HappeningNow = Start < DateTime.Now &&
