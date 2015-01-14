@@ -3,13 +3,13 @@ using ExchangeOofScheduler.Core;
 
 namespace ExchangeOofScheduler
 {
-  class ExchangeOofScheduler
+  public class OofScheduler
   {
     private readonly ApplicationSettings settings;
     private readonly OutOfOfficeSetter oofSetter;
     private readonly OofSetterExceptionHandler oofSetterExceptionHandler;
 
-    public ExchangeOofScheduler(ApplicationSettings settings, OutOfOfficeSetter oofSetter, OofSetterExceptionHandler oofSetterExceptionHandler)
+    public OofScheduler(ApplicationSettings settings, OutOfOfficeSetter oofSetter, OofSetterExceptionHandler oofSetterExceptionHandler)
     {
       this.settings = settings;
       this.oofSetter = oofSetter;

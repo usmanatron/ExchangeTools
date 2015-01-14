@@ -9,7 +9,7 @@ namespace ExchangeOofScheduler
     static void Main()
     {
       var kernel = SetupNinjectKernel();
-      kernel.Get<ExchangeOofScheduler>().ScheduleOof();
+      kernel.Get<OofScheduler>().ScheduleOof();
     }
 
     private static StandardKernel SetupNinjectKernel()
