@@ -64,6 +64,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Dates\DateRangeCalculatorTests.cs" />
     <Compile Include="Dates\DateRangeTests.cs" />
     <Compile Include="Dates\DayOfWeekReaderTests.cs" />
     <Compile Include="Dates\TestClock.cs" />

@@ -22,6 +22,17 @@ namespace ExchangeOofScheduler.Core.Dates
       var oofStartDate = GetNextDateForDayOfWeek(datetimeNow, startDay);
       var oofEndDate = GetNextDateForDayOfWeek(datetimeNow, endDay);
 
+      if (oofEndDate < oofStartDate)
+      {
+        if (datetimeNow.DayOfWeek == oofEndDate.DayOfWeek)
+        {
+          oofEndDate = oofEndDate.AddDays(7);
+        }
+        else
+        {
+          oofStartDate = oofStartDate.AddDays(-7);
+        }
+      }
 
       oofStartDate = oofStartDate.AddDays(-1);
       oofStartDate = SetTime(oofStartDate);
