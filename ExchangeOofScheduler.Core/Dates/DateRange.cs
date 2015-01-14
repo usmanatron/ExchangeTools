@@ -8,7 +8,7 @@ namespace ExchangeOofScheduler.Core.Dates
     public DateTime End { get; private set; }
     public bool HappeningNow { get; private set; }
 
-    public DateRange(DateTime start, DateTime end)
+    public DateRange(DateTime start, DateTime end, DateTime datetimeNow)
     {
       if (start > end)
       {
@@ -18,8 +18,8 @@ namespace ExchangeOofScheduler.Core.Dates
 
       this.Start = start;
       this.End = end;
-      HappeningNow = Start < DateTime.Now &&
-                     DateTime.Now < End;
+      HappeningNow = Start < datetimeNow &&
+                     datetimeNow < End;
     }
   }
 }

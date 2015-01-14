@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Dates\DateRangeTests.cs" />
     <Compile Include="Dates\DayOfWeekReaderTests.cs" />
+    <Compile Include="Dates\TestClock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

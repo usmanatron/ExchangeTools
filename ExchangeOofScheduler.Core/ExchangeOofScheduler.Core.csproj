@@ -53,6 +53,8 @@
     <Compile Include="Dates\DateRange.cs" />
     <Compile Include="Dates\DateRangeCalculator.cs" />
     <Compile Include="Dates\DayOfWeekReader.cs" />
+    <Compile Include="Dates\IClock.cs" />
+    <Compile Include="Dates\SystemClock.cs" />
     <Compile Include="Exchange\ExchangeServiceBuilder.cs" />
     <Compile Include="Exchange\ExchangeClient.cs" />
     <Compile Include="ApplicationSettings.cs" />

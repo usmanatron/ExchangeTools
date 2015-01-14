@@ -4,6 +4,13 @@ namespace ExchangeOofScheduler.Core.Dates
 {
   public class DateRangeCalculator
   {
+    private readonly IClock clock;
+
+    public DateRangeCalculator(IClock clock)
+    {
+      this.clock = clock;
+    }
+
     /// <remarks>
     /// Once we have the correct dates, we update the DateTimes as follows:
     /// * Make the startDate one day before and start at 6pm (so the Oof is set the evening before)
@@ -11,17 +18,16 @@ namespace ExchangeOofScheduler.Core.Dates
     /// </remarks>
     public DateRange CalculateNextDateRangeForOof(DayOfWeek startDay, DayOfWeek endDay)
     {
-      var today = DateTime.Today;
+      var datetimeNow = clock.Now;
+      var oofStartDate = GetNextDateForDayOfWeek(datetimeNow, startDay);
+      var oofEndDate = GetNextDateForDayOfWeek(datetimeNow, endDay);
 
-      var oofStartDate = GetNextDateForDayOfWeek(today, startDay);
-      var oofEndDate = GetNextDateForDayOfWeek(today, endDay);
-      
-      // Update the times of these dates as follows:
+
       oofStartDate = oofStartDate.AddDays(-1);
       oofStartDate = SetTime(oofStartDate);
       oofEndDate = SetTime(oofEndDate);
 
-      return new DateRange(oofStartDate, oofEndDate);
+      return new DateRange(oofStartDate, oofEndDate, datetimeNow);
     }
 
     /// <remarks>
