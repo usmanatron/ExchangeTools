@@ -15,8 +15,8 @@ namespace ExchangeOofScheduler.Core.Dates
         throw new ArgumentException(message);
       }
 
-      this.Start = start;
-      this.End = end;
+      Start = start;
+      End = end;
     }
   }
 }
