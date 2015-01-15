@@ -12,6 +12,8 @@ namespace ExchangeOofScheduler.Core
     private readonly DayOfWeekReader DayOfWeekReader;
     private readonly DateRangeCalculator dateRangeCalculator;
 
+    private const string timeFormat = @"HH:mm:ss";
+
     public ApplicationSettings(DayOfWeekReader dayOfWeekReader, DateRangeCalculator dateRangeCalculator)
     {
       applicationSettings = ConfigurationManager.GetSection("OutOfOfficeSettings") as NameValueCollection;
@@ -37,14 +39,24 @@ namespace ExchangeOofScheduler.Core
       get { return DayOfWeekReader.Read(applicationSettings["startDay"]); }
     }
 
+    public TimeSpan startTime
+    {
+      get { return DateTime.Parse(applicationSettings["startTime"]).TimeOfDay; }
+    }
+
     public DayOfWeek endDay
     {
       get { return DayOfWeekReader.Read(applicationSettings["endDay"]); }
     }
 
+    public TimeSpan endTime
+    {
+      get { return DateTime.Parse(applicationSettings["endTime"]).TimeOfDay; }
+    }
+
     public DateRange nextApplicableDateRangeForOof
     {
-      get { return dateRangeCalculator.CalculateNextDateRangeForOof(startDay, endDay); }
+      get { return dateRangeCalculator.CalculateNextDateRangeForOof(startDay, startTime, endDay, endTime); }
     }
 
     public string internalReply

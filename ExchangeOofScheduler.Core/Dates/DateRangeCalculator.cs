@@ -16,7 +16,7 @@ namespace ExchangeOofScheduler.Core.Dates
     /// * Make the startDate one day before and start at 6pm (so the Oof is set the evening before)
     /// * Make the endDate end at 6pm (so it is always disabled at the end of the working day)
     /// </remarks>
-    public DateRange CalculateNextDateRangeForOof(DayOfWeek startDay, DayOfWeek endDay)
+    public DateRange CalculateNextDateRangeForOof(DayOfWeek startDay, TimeSpan startTime, DayOfWeek endDay, TimeSpan endTime)
     {
       var datetimeNow = clock.Now;
       var oofStartDate = GetNextDateForDayOfWeek(datetimeNow, startDay);
@@ -35,8 +35,8 @@ namespace ExchangeOofScheduler.Core.Dates
       }
 
       oofStartDate = oofStartDate.AddDays(-1);
-      oofStartDate = SetTime(oofStartDate);
-      oofEndDate = SetTime(oofEndDate);
+      oofStartDate = oofStartDate.Date + startTime;
+      oofEndDate = oofEndDate.Date + endTime;
 
       return new DateRange(oofStartDate, oofEndDate);
     }
@@ -49,12 +49,6 @@ namespace ExchangeOofScheduler.Core.Dates
       // The (... + 7) % 7 ensures we end up with a value in the range [0, 6]
       int daysUntilDate = ((int)dayOfWeek - (int)now.DayOfWeek + 7) % 7;
       return now.AddDays(daysUntilDate);
-    }
-
-    private DateTime SetTime(DateTime dateTime)
-    {
-      var newTime = new TimeSpan(18, 00, 00);
-      return dateTime.Date + newTime;
     }
   }
 }

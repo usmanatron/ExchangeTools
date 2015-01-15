@@ -8,8 +8,12 @@ namespace ExchangeOofScheduler.Core
   {
     string userEmail { get; }
     bool debugModeEnabled { get; }
+
     DayOfWeek startDay { get; }
+    TimeSpan startTime { get; }
     DayOfWeek endDay { get; }
+    TimeSpan endTime { get; }
+    
     DateRange nextApplicableDateRangeForOof { get; }
     string internalReply { get; }
     OofExternalAudience sendToExternalRecipients { get; }
