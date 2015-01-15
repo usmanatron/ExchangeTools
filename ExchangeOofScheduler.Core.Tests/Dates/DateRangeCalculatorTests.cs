@@ -78,7 +78,7 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
     }
 
     [Test]
-    public void DateRangeEndingOnWednesday_SelectsNextWeek() //qqUMI
+    public void DateRangeEndingOnWednesday_SelectsNextWeek()
     {
       var range = dateRangeCalculator.CalculateNextDateRangeForOof(DayOfWeek.Monday, DayOfWeek.Wednesday);
 

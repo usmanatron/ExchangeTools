@@ -1,4 +1,5 @@
 ﻿using ExchangeOofScheduler.Core;
+using ExchangeOofScheduler.Core.Dates;
 using ExchangeOofScheduler.Core.Exchange;
 using Ninject;
 
@@ -15,6 +16,7 @@ namespace ExchangeOofScheduler
     private static StandardKernel SetupNinjectKernel()
     {
       var kernel = new StandardKernel();
+      kernel.Bind<IClock>().To<SystemClock>();
       kernel.Bind<IExchangeClient>().To<ExchangeClient>().InSingletonScope();
       kernel.Bind<ApplicationSettings>().ToSelf().InSingletonScope();
       return kernel;
