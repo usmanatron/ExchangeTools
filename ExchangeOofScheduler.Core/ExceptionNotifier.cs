@@ -6,13 +6,13 @@ namespace ExchangeOofScheduler.Core
   /// <summary>
   /// Handles exceptions raised by OofSetter
   /// </summary>
-  public class OofSetterExceptionHandler
+  public class ExceptionNotifier : IExceptionNotifier
   {
-    private readonly ExchangeClient exchangeClient;
-    private readonly ApplicationSettings settings;
+    private readonly IExchangeClient exchangeClient;
+    private readonly IApplicationSettings settings;
     private const string subject = "ERROR auto-setting Out Of Office";
-
-    public OofSetterExceptionHandler(ExchangeClient exchangeClient, ApplicationSettings settings)
+    
+    public ExceptionNotifier(IExchangeClient exchangeClient, IApplicationSettings settings)
     {
       this.exchangeClient = exchangeClient;
       this.settings = settings;
