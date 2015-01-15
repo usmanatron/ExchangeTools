@@ -1,7 +1,7 @@
 ﻿using System;
 using ExchangeOofScheduler.Core.Exchange;
 
-namespace ExchangeOofScheduler.Core
+namespace ExchangeOofScheduler.Core.Exceptions
 {
   /// <summary>
   /// Handles exceptions raised by OofSetter

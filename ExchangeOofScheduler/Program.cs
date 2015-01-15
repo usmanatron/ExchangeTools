@@ -1,5 +1,6 @@
 ﻿using ExchangeOofScheduler.Core;
 using ExchangeOofScheduler.Core.Dates;
+using ExchangeOofScheduler.Core.Exceptions;
 using ExchangeOofScheduler.Core.Exchange;
 using Ninject;
 

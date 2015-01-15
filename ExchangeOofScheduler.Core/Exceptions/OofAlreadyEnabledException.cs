@@ -2,7 +2,7 @@
 using System.Text;
 using Microsoft.Exchange.WebServices.Data;
 
-namespace ExchangeOofScheduler.Core
+namespace ExchangeOofScheduler.Core.Exceptions
 {
   public class OofAlreadyEnabledException : Exception
   {

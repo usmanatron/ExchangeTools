@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExchangeOofScheduler.Core
+namespace ExchangeOofScheduler.Core.Exceptions
 {
   public interface IExceptionNotifier
   {
