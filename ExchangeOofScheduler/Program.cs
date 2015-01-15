@@ -17,6 +17,8 @@ namespace ExchangeOofScheduler
     {
       var kernel = new StandardKernel();
       kernel.Bind<IClock>().To<SystemClock>();
+      kernel.Bind<IApplicationSettings>().To<ApplicationSettings>();
+      kernel.Bind<IExceptionNotifier>().To<ExceptionNotifier>();
       kernel.Bind<IExchangeClient>().To<ExchangeClient>().InSingletonScope();
       kernel.Bind<ApplicationSettings>().ToSelf().InSingletonScope();
       return kernel;

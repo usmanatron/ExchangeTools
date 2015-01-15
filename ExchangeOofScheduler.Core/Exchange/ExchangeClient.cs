@@ -5,9 +5,9 @@ namespace ExchangeOofScheduler.Core.Exchange
   public class ExchangeClient : IExchangeClient
   {
     private readonly ExchangeService exchangeService;
-    private readonly ApplicationSettings settings;
+    private readonly IApplicationSettings settings;
 
-    public ExchangeClient(ExchangeServiceBuilder exchangeServiceBuilder, ApplicationSettings settings)
+    public ExchangeClient(ExchangeServiceBuilder exchangeServiceBuilder, IApplicationSettings settings)
     {
       this.settings = settings;
       this.exchangeService = exchangeServiceBuilder

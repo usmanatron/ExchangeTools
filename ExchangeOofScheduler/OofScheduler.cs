@@ -5,11 +5,11 @@ namespace ExchangeOofScheduler
 {
   public class OofScheduler
   {
-    private readonly ApplicationSettings settings;
+    private readonly IApplicationSettings settings;
     private readonly OutOfOfficeSetter oofSetter;
-    private readonly OofSetterExceptionHandler oofSetterExceptionHandler;
+    private readonly IExceptionNotifier oofSetterExceptionHandler;
 
-    public OofScheduler(ApplicationSettings settings, OutOfOfficeSetter oofSetter, OofSetterExceptionHandler oofSetterExceptionHandler)
+    public OofScheduler(IApplicationSettings settings, OutOfOfficeSetter oofSetter, IExceptionNotifier oofSetterExceptionHandler)
     {
       this.settings = settings;
       this.oofSetter = oofSetter;

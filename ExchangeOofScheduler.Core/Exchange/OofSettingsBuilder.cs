@@ -1,14 +1,13 @@
-﻿using System;
-using Microsoft.Exchange.WebServices.Data;
+﻿using Microsoft.Exchange.WebServices.Data;
 
 namespace ExchangeOofScheduler.Core.Exchange
 {
   public class OofSettingsBuilder
   {
     private readonly OofSettings oofSettings;
-    private readonly ApplicationSettings applicationSettings;
+    private readonly IApplicationSettings applicationSettings;
 
-    public OofSettingsBuilder(ApplicationSettings applicationSettings)
+    public OofSettingsBuilder(IApplicationSettings applicationSettings)
     {
       this.oofSettings = new OofSettings();
       this.applicationSettings = applicationSettings;

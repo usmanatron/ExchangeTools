@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IApplicationSettings.cs" />
     <Compile Include="Dates\DateRange.cs" />
     <Compile Include="Dates\DateRangeCalculator.cs" />
     <Compile Include="Dates\DayOfWeekReader.cs" />
@@ -60,8 +61,9 @@
     <Compile Include="ApplicationSettings.cs" />
     <Compile Include="Exchange\IExchangeClient.cs" />
     <Compile Include="Exchange\OofSettingsBuilder.cs" />
+    <Compile Include="IExceptionNotifier.cs" />
     <Compile Include="OofAlreadyEnabledException.cs" />
-    <Compile Include="OofSetterExceptionHandler.cs" />
+    <Compile Include="ExceptionNotifier.cs" />
     <Compile Include="OutOfOfficeSetter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

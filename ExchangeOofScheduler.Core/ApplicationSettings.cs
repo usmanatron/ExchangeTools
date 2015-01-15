@@ -6,7 +6,7 @@ using Microsoft.Exchange.WebServices.Data;
 
 namespace ExchangeOofScheduler.Core
 {
-  public class ApplicationSettings
+  public class ApplicationSettings : IApplicationSettings
   {
     private readonly NameValueCollection applicationSettings;
     private readonly DayOfWeekReader DayOfWeekReader;
