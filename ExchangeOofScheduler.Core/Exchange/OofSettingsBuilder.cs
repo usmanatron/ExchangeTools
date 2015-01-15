@@ -17,9 +17,7 @@ namespace ExchangeOofScheduler.Core.Exchange
     {
       var nextDateRange = applicationSettings.nextApplicableDateRangeForOof;
       oofSettings.Duration = new TimeWindow(nextDateRange.Start, nextDateRange.End);
-      oofSettings.State = nextDateRange.HappeningNow 
-        ? OofState.Enabled
-        : OofState.Scheduled;
+      oofSettings.State = OofState.Scheduled;
       oofSettings.ExternalReply = new OofReply(applicationSettings.externalReply);
       oofSettings.InternalReply = new OofReply(applicationSettings.internalReply);
       oofSettings.ExternalAudience = applicationSettings.sendToExternalRecipients;

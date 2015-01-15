@@ -38,7 +38,7 @@ namespace ExchangeOofScheduler.Core.Dates
       oofStartDate = SetTime(oofStartDate);
       oofEndDate = SetTime(oofEndDate);
 
-      return new DateRange(oofStartDate, oofEndDate, datetimeNow);
+      return new DateRange(oofStartDate, oofEndDate);
     }
 
     /// <remarks>
