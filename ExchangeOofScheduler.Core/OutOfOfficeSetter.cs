@@ -9,10 +9,10 @@ namespace ExchangeOofScheduler.Core
   /// </summary>
   public class OutOfOfficeSetter : IOutOfOfficeSetter
   {
-    private readonly ExchangeClient exchangeClient;
-    private readonly OofSettingsBuilder oofSettingsBuilder;
+    private readonly IExchangeClient exchangeClient;
+    private readonly IOofSettingsBuilder oofSettingsBuilder;
 
-    public OutOfOfficeSetter(ExchangeClient exchangeClient, OofSettingsBuilder oofSettingsBuilder)
+    public OutOfOfficeSetter(IExchangeClient exchangeClient, IOofSettingsBuilder oofSettingsBuilder)
     {
       this.exchangeClient = exchangeClient;
       this.oofSettingsBuilder = oofSettingsBuilder;

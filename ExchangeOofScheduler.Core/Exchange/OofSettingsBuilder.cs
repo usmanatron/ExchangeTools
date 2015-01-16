@@ -2,7 +2,7 @@
 
 namespace ExchangeOofScheduler.Core.Exchange
 {
-  public class OofSettingsBuilder
+  public class OofSettingsBuilder : IOofSettingsBuilder
   {
     private readonly OofSettings oofSettings;
     private readonly IApplicationSettings applicationSettings;
