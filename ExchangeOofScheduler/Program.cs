@@ -1,4 +1,5 @@
-﻿using ExchangeOofScheduler.Core;
+﻿using System;
+using ExchangeOofScheduler.Core;
 using ExchangeOofScheduler.Core.Dates;
 using ExchangeOofScheduler.Core.Exceptions;
 using ExchangeOofScheduler.Core.Exchange;
@@ -11,7 +12,13 @@ namespace ExchangeOofScheduler
     static void Main()
     {
       var kernel = SetupNinjectKernel();
+      var isDebugMode = kernel.Get<ApplicationSettings>().debugModeEnabled;
+      
       kernel.Get<OofScheduler>().ScheduleOof();
+      if (isDebugMode)
+      {
+        Console.ReadLine();
+      }
     }
 
     private static StandardKernel SetupNinjectKernel()

@@ -6,13 +6,11 @@ namespace ExchangeOofScheduler
 {
   public class OofScheduler
   {
-    private readonly IApplicationSettings settings;
-    private readonly OutOfOfficeSetter oofSetter;
+    private readonly IOutOfOfficeSetter oofSetter;
     private readonly IExceptionNotifier oofSetterExceptionHandler;
 
-    public OofScheduler(IApplicationSettings settings, OutOfOfficeSetter oofSetter, IExceptionNotifier oofSetterExceptionHandler)
+    public OofScheduler(IOutOfOfficeSetter oofSetter, IExceptionNotifier oofSetterExceptionHandler)
     {
-      this.settings = settings;
       this.oofSetter = oofSetter;
       this.oofSetterExceptionHandler = oofSetterExceptionHandler;
     }
@@ -26,12 +24,6 @@ namespace ExchangeOofScheduler
       catch (Exception exception)
       {
         oofSetterExceptionHandler.HandleException(exception);
-      }
-
-      // Pause if debug mode is enabled, so we can read the Exchange log messages
-      if (settings.debugModeEnabled)
-      {
-        Console.ReadLine();
       }
     }
   }

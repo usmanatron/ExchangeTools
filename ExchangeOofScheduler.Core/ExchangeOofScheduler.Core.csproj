@@ -64,6 +64,7 @@
     <Compile Include="Exceptions\IExceptionNotifier.cs" />
     <Compile Include="Exceptions\OofAlreadyEnabledException.cs" />
     <Compile Include="Exceptions\ExceptionNotifier.cs" />
+    <Compile Include="IOutOfOfficeSetter.cs" />
     <Compile Include="OutOfOfficeSetter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

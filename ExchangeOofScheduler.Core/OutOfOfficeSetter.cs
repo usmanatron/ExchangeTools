@@ -7,7 +7,7 @@ namespace ExchangeOofScheduler.Core
   /// <summary>
   /// Handles the actual setting of an out of office message
   /// </summary>
-  public class OutOfOfficeSetter
+  public class OutOfOfficeSetter : IOutOfOfficeSetter
   {
     private readonly ExchangeClient exchangeClient;
     private readonly OofSettingsBuilder oofSettingsBuilder;

@@ -53,10 +53,21 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="OofSchedulerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExchangeOofScheduler.Core\ExchangeOofScheduler.Core.csproj">
+      <Project>{0a85c88d-f9c8-458a-b376-289019f2a3b9}</Project>
+      <Name>ExchangeOofScheduler.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExchangeOofScheduler\ExchangeOofScheduler.csproj">
+      <Project>{5a644f30-968a-4c06-ab04-4464cea5ff2d}</Project>
+      <Name>ExchangeOofScheduler</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
