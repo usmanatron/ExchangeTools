@@ -14,9 +14,8 @@ namespace ExchangeOofScheduler.Core
     DayOfWeek endDay { get; }
     TimeSpan endTime { get; }
     
-    DateRange nextApplicableDateRangeForOof { get; }
     string internalReply { get; }
-    OofExternalAudience sendToExternalRecipients { get; }
+    string sendToExternalRecipients { get; }
     string externalReply { get; }
   }
 }

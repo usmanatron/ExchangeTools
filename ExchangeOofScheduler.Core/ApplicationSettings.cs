@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Specialized;
 using System.Configuration;
-using Microsoft.Exchange.WebServices.Data;
 
 namespace ExchangeOofScheduler.Core
 {
@@ -10,15 +9,12 @@ namespace ExchangeOofScheduler.Core
   {
     private readonly NameValueCollection applicationSettings;
     private readonly DayOfWeekReader DayOfWeekReader;
-    private readonly DateRangeCalculator dateRangeCalculator;
 
-    private const string timeFormat = @"HH:mm:ss";
 
-    public ApplicationSettings(DayOfWeekReader dayOfWeekReader, DateRangeCalculator dateRangeCalculator)
+    public ApplicationSettings(DayOfWeekReader dayOfWeekReader)
     {
       applicationSettings = ConfigurationManager.GetSection("OutOfOfficeSettings") as NameValueCollection;
       this.DayOfWeekReader = dayOfWeekReader;
-      this.dateRangeCalculator = dateRangeCalculator;
     }
 
     public string userEmail
@@ -54,36 +50,16 @@ namespace ExchangeOofScheduler.Core
       get { return DateTime.Parse(applicationSettings["endTime"]).TimeOfDay; }
     }
 
-    public DateRange nextApplicableDateRangeForOof
-    {
-      get { return dateRangeCalculator.CalculateNextDateRangeForOof(startDay, startTime, endDay, endTime); }
-    }
-
     public string internalReply
     {
       get { return applicationSettings["internalReply"]; }
     }
 
-    public OofExternalAudience sendToExternalRecipients
+    public string sendToExternalRecipients
     {
       get
       {
-        var configValue = applicationSettings["sendToExternalRecipients"].ToLower();
-        switch (configValue)
-        {
-          case "none":
-            return OofExternalAudience.None;
-          case "known":
-            return OofExternalAudience.Known;
-          case "all":
-            return OofExternalAudience.All;
-          default:
-            var message =
-              string.Format(
-                "Unexpected value for \"sendToExternalRecipients\" ({0}). Expected values are None,All and Known.",
-                configValue);
-            throw new ArgumentException(message);
-        }
+        return applicationSettings["sendToExternalRecipients"];
       }
     }
 
