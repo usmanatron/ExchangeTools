@@ -2,7 +2,7 @@
 
 namespace ExchangeOofScheduler.Core.Dates
 {
-  public class DateRangeCalculator
+  public class DateRangeCalculator : IDateRangeCalculator
   {
     private readonly IClock clock;
 

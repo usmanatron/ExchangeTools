@@ -8,19 +8,19 @@ namespace ExchangeOofScheduler.Core.Exchange
   {
     private readonly OofSettings oofSettings;
     private readonly IApplicationSettings applicationSettings;
-    private readonly DateRangeCalculator dateRangeCalculator;
+    private readonly IDateRangeCalculator dateRangeCalculator;
 
-    public OofSettingsBuilder(IApplicationSettings applicationSettings, DateRangeCalculator dateRangeCalculator)
+    public OofSettingsBuilder(IApplicationSettings applicationSettings, IDateRangeCalculator dateRangeCalculator)
     {
-      this.oofSettings = new OofSettings{ State = OofState.Scheduled };
       this.applicationSettings = applicationSettings;
       this.dateRangeCalculator = dateRangeCalculator;
+      oofSettings = new OofSettings { State = OofState.Scheduled };
     }
 
     public OofSettings Build()
     {
-      var nextDateRange = dateRangeCalculator.CalculateNextDateRangeForOof(applicationSettings.startDay, applicationSettings.startTime, applicationSettings.endDay, applicationSettings.endTime);
-      oofSettings.Duration = new TimeWindow(nextDateRange.Start, nextDateRange.End);
+      var dateRange = dateRangeCalculator.CalculateNextDateRangeForOof(applicationSettings.startDay, applicationSettings.startTime, applicationSettings.endDay, applicationSettings.endTime);
+      oofSettings.Duration = new TimeWindow(dateRange.Start, dateRange.End);
       oofSettings.ExternalReply = new OofReply(applicationSettings.externalReply);
       oofSettings.InternalReply = new OofReply(applicationSettings.internalReply);
       oofSettings.ExternalAudience = GetExternalAudienceSetting();
