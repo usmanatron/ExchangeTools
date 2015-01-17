@@ -1,6 +1,4 @@
-﻿using ExchangeOofScheduler.Core.Dates;
-using Microsoft.Exchange.WebServices.Data;
-using System;
+﻿using System;
 
 namespace ExchangeOofScheduler.Core
 {

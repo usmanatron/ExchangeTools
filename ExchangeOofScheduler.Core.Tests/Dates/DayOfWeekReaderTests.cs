@@ -48,7 +48,9 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
       new Tuple<string, DayOfWeek>("Tu", DayOfWeek.Tuesday),
       new Tuple<string, DayOfWeek>("We", DayOfWeek.Wednesday),
       new Tuple<string, DayOfWeek>("Th", DayOfWeek.Thursday),
-      new Tuple<string, DayOfWeek>("Fr", DayOfWeek.Friday)
+      new Tuple<string, DayOfWeek>("Fr", DayOfWeek.Friday),
+      new Tuple<string, DayOfWeek>("Sa", DayOfWeek.Saturday),
+      new Tuple<string, DayOfWeek>("Su", DayOfWeek.Sunday)
     };
   }
 }

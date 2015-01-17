@@ -25,6 +25,10 @@ namespace ExchangeOofScheduler.Core.Dates
           return DayOfWeek.Thursday;
         case "fr":
           return DayOfWeek.Friday;
+        case "sa":
+          return DayOfWeek.Saturday;
+        case "su":
+          return DayOfWeek.Sunday;  
         default:
           throw new InvalidOperationException("The given day of week (" + input + ") is not expected - please check and retry.");
       }

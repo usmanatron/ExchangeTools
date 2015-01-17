@@ -102,5 +102,15 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
       Assert.AreEqual(new DateTime(2015, 1, 12, 17, 30, 0), range.Start);
       Assert.AreEqual(new DateTime(2015, 1, 15, 18, 0, 0), range.End);
     }
+
+    [Test]
+    public void DateRangeSpanningWeekend_GivesExpectedRange()
+    {
+      var range = dateRangeCalculator.CalculateNextDateRangeForOof(DayOfWeek.Friday, startTime, DayOfWeek.Monday, endTime);
+
+      // Thursday - Monday the next week
+      Assert.AreEqual(new DateTime(2015, 1, 15, 17, 30, 0), range.Start);
+      Assert.AreEqual(new DateTime(2015, 1, 19, 18, 0, 00), range.End);
+    }
   }
 }
