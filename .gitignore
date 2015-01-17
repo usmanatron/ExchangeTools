@@ -198,3 +198,6 @@ packages/
 # NCrunch
 *.ncrunchproject
 *.ncrunchsolution
+
+# Opencover reports
+opencover/

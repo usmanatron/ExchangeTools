@@ -1,0 +1,2 @@
+.\packages\NUnit.Runners.2.6.4\tools\nunit-console-x86.exe /framework:net-4.0 .\ExchangeOofScheduler.Core.Tests\bin\Debug\ExchangeOofScheduler.Core.Tests.dll /noshadow /result:opencover\testresults\ExchangeOofScheduler.Core.xml
+.\packages\NUnit.Runners.2.6.4\tools\nunit-console-x86.exe /framework:net-4.0 .\ExchangeOofScheduler.Tests\bin\Debug\ExchangeOofScheduler.Tests.dll /noshadow /result:opencover\testresults\ExchangeOofScheduler.xml
