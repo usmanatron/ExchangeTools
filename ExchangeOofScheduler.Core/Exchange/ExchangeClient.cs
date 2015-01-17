@@ -35,7 +35,7 @@ namespace ExchangeOofScheduler.Core.Exchange
                 Body = new MessageBody(BodyType.HTML, body)
               };
       message.ToRecipients.Add(settings.userEmail);
-      
+
       message.Send();
     }
   }

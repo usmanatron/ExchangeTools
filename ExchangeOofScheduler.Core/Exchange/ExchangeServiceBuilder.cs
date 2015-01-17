@@ -1,5 +1,5 @@
-﻿using System;
-using Microsoft.Exchange.WebServices.Data;
+﻿using Microsoft.Exchange.WebServices.Data;
+using System;
 
 namespace ExchangeOofScheduler.Core.Exchange
 {
@@ -36,7 +36,7 @@ namespace ExchangeOofScheduler.Core.Exchange
       if (enableTracing)
       {
         exchangeService.TraceEnabled = true;
-        exchangeService.TraceFlags = TraceFlags.All; 
+        exchangeService.TraceFlags = TraceFlags.All;
       }
 
       return this;
@@ -51,7 +51,7 @@ namespace ExchangeOofScheduler.Core.Exchange
     /// <summary>
     /// Validate the contents of the redirection URL. In this simple validation
     /// callback, the redirection URL is considered valid if it is using HTTPS
-    /// to encrypt the authentication credentials. 
+    /// to encrypt the authentication credentials.
     /// </summary>
     private bool ValidateRedirectionUrl(string redirectionUrl)
     {

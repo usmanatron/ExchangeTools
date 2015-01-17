@@ -1,14 +1,14 @@
-﻿using System;
-using ExchangeOofScheduler.Core;
+﻿using ExchangeOofScheduler.Core;
 using ExchangeOofScheduler.Core.Exceptions;
 using ExchangeOofScheduler.Core.Exchange;
 using FakeItEasy;
 using NUnit.Framework;
+using System;
 
 namespace ExchangeOofScheduler.Tests
 {
   [TestFixture]
-  class OofSchedulerTests
+  internal class OofSchedulerTests
   {
     private IOutOfOfficeSetter oofSetter;
     private IExchangeClient exchangeClient;

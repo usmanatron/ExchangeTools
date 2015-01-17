@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ExchangeOofScheduler.Core.Dates;
+﻿using ExchangeOofScheduler.Core.Dates;
+using System;
 
 namespace ExchangeOofScheduler.Core.Tests.Dates
 {
-  class TestClock : IClock
+  internal class TestClock : IClock
   {
     private readonly DateTime dateTime;
 

@@ -1,11 +1,11 @@
-﻿using System;
-using ExchangeOofScheduler.Core.Dates;
+﻿using ExchangeOofScheduler.Core.Dates;
 using NUnit.Framework;
+using System;
 
 namespace ExchangeOofScheduler.Core.Tests.Dates
 {
   [TestFixture]
-  class DayOfWeekReaderTests
+  internal class DayOfWeekReaderTests
   {
     private DayOfWeekReader reader;
 
@@ -39,7 +39,7 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
     [TestCase("?!")]
     public void UnexpectedInput_Throws(string input)
     {
-      Assert.Throws<InvalidOperationException>(() => reader.Read(input));      
+      Assert.Throws<InvalidOperationException>(() => reader.Read(input));
     }
 
     private readonly object[] validInputs =

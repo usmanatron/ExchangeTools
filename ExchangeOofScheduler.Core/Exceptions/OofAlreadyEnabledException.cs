@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.Exchange.WebServices.Data;
+using System;
 using System.Text;
-using Microsoft.Exchange.WebServices.Data;
 
 namespace ExchangeOofScheduler.Core.Exceptions
 {

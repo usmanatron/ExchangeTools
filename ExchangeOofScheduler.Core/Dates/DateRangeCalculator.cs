@@ -36,7 +36,7 @@ namespace ExchangeOofScheduler.Core.Dates
 
       oofStartDate = oofStartDate.AddDays(-1);
       oofStartDate = oofStartDate.Date + schedule.startTime;
-      oofEndDate = oofEndDate.Date +schedule.endTime;
+      oofEndDate = oofEndDate.Date + schedule.endTime;
 
       return new DateRange(oofStartDate, oofEndDate);
     }

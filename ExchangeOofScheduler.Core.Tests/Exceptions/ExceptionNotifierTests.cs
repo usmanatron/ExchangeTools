@@ -1,14 +1,14 @@
-﻿using System;
-using ExchangeOofScheduler.Core.Exceptions;
+﻿using ExchangeOofScheduler.Core.Exceptions;
 using ExchangeOofScheduler.Core.Exchange;
 using FakeItEasy;
 using Microsoft.Exchange.WebServices.Data;
 using NUnit.Framework;
+using System;
 
 namespace ExchangeOofScheduler.Core.Tests.Exceptions
 {
   [TestFixture]
-  class ExceptionNotifierTests
+  internal class ExceptionNotifierTests
   {
     private OofSettings exampleOofSettings;
     private IExchangeClient exchangeClient;

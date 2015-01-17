@@ -8,8 +8,11 @@ namespace ExchangeOofScheduler.Core
   public class OofSchedule
   {
     public DayOfWeek startDay { get; private set; }
+
     public TimeSpan startTime { get; private set; }
+
     public DayOfWeek endDay { get; private set; }
+
     public TimeSpan endTime { get; private set; }
 
     public OofSchedule(DayOfWeek startDay, TimeSpan startTime, DayOfWeek endDay, TimeSpan endTime)

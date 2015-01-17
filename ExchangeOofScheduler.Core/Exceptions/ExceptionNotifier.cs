@@ -1,5 +1,5 @@
-﻿using System;
-using ExchangeOofScheduler.Core.Exchange;
+﻿using ExchangeOofScheduler.Core.Exchange;
+using System;
 
 namespace ExchangeOofScheduler.Core.Exceptions
 {
@@ -11,7 +11,7 @@ namespace ExchangeOofScheduler.Core.Exceptions
     private readonly IExchangeClient exchangeClient;
     private readonly IApplicationSettings settings;
     private const string subject = "ERROR auto-setting Out Of Office";
-    
+
     public ExceptionNotifier(IExchangeClient exchangeClient, IApplicationSettings settings)
     {
       this.exchangeClient = exchangeClient;
@@ -22,7 +22,7 @@ namespace ExchangeOofScheduler.Core.Exceptions
     {
       var body = GetMessageBody(e);
       exchangeClient.SendEmailToSelf(subject, body);
-      
+
       if (settings.debugModeEnabled)
       {
         Console.WriteLine(body);
@@ -36,7 +36,7 @@ namespace ExchangeOofScheduler.Core.Exceptions
         var exception = e as OofAlreadyEnabledException;
         return exception.Body;
       }
-      
+
       return e.ToString().Replace(Environment.NewLine, "<br />");
     }
   }

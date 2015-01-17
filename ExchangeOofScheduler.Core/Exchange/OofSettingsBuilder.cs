@@ -1,6 +1,6 @@
-﻿using System;
-using ExchangeOofScheduler.Core.Dates;
+﻿using ExchangeOofScheduler.Core.Dates;
 using Microsoft.Exchange.WebServices.Data;
+using System;
 
 namespace ExchangeOofScheduler.Core.Exchange
 {
@@ -34,10 +34,13 @@ namespace ExchangeOofScheduler.Core.Exchange
       {
         case "none":
           return OofExternalAudience.None;
+
         case "known":
           return OofExternalAudience.Known;
+
         case "all":
           return OofExternalAudience.All;
+
         default:
           var message =
             string.Format(

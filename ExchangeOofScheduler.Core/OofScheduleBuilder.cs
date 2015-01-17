@@ -1,5 +1,5 @@
-﻿using System;
-using ExchangeOofScheduler.Core.Dates;
+﻿using ExchangeOofScheduler.Core.Dates;
+using System;
 
 namespace ExchangeOofScheduler.Core
 {

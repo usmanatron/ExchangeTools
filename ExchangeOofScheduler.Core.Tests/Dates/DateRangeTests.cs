@@ -1,11 +1,11 @@
-﻿using System;
-using ExchangeOofScheduler.Core.Dates;
+﻿using ExchangeOofScheduler.Core.Dates;
 using NUnit.Framework;
+using System;
 
 namespace ExchangeOofScheduler.Core.Tests.Dates
 {
   [TestFixture]
-  class DateRangeTests
+  internal class DateRangeTests
   {
     [Test]
     public void RangeWithDatesInDescendingOrder_Throws()

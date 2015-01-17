@@ -1,6 +1,6 @@
-﻿using System;
-using ExchangeOofScheduler.Core;
+﻿using ExchangeOofScheduler.Core;
 using ExchangeOofScheduler.Core.Exceptions;
+using System;
 
 namespace ExchangeOofScheduler
 {

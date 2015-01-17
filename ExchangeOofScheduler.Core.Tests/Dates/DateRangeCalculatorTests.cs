@@ -1,16 +1,16 @@
-﻿using System;
-using ExchangeOofScheduler.Core.Dates;
+﻿using ExchangeOofScheduler.Core.Dates;
 using NUnit.Framework;
+using System;
 
 namespace ExchangeOofScheduler.Core.Tests.Dates
 {
   [TestFixture]
-  class DateRangeCalculatorTests
+  internal class DateRangeCalculatorTests
   {
     private DateRangeCalculator dateRangeCalculator;
     private TimeSpan startTime;
     private TimeSpan endTime;
-    
+
     [SetUp]
     public void Setup()
     {
@@ -19,7 +19,7 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
 
       // Wednesday 14th January 2015 @3pm
       var clock = new TestClock(new DateTime(2015, 1, 14, 12, 0, 0));
-      
+
       dateRangeCalculator = new DateRangeCalculator(clock);
     }
 
@@ -55,7 +55,7 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
       Assert.AreEqual(new DateTime(2015, 1, 13, 17, 30, 0), range.Start);
       Assert.AreEqual(new DateTime(2015, 1, 14, 18, 0, 0), range.End);
     }
-    
+
     [Test]
     public void DateRangeAfterWednesday_SpanningMultipleDays_GivesExpectedRangeInSameWeek()
     {

@@ -7,7 +7,7 @@ using NUnit.Framework;
 namespace ExchangeOofScheduler.Core.Tests
 {
   [TestFixture]
-  class OutOfOfficeSetterTests
+  internal class OutOfOfficeSetterTests
   {
     private IExchangeClient exchangeClient;
     private IOofSettingsBuilder oofSettingsBuilder;
@@ -35,7 +35,7 @@ namespace ExchangeOofScheduler.Core.Tests
     [Test]
     public void SettingOutOfOffice_CurrentOofStateDisabled_NewOofSet()
     {
-      A.CallTo(() => exchangeClient.GetOofSettings()).Returns(new OofSettings {State = OofState.Disabled});
+      A.CallTo(() => exchangeClient.GetOofSettings()).Returns(new OofSettings { State = OofState.Disabled });
 
       outOfOfficeSetter.SetOutOfOffice();
 
