@@ -1,16 +1,11 @@
-﻿using System;
-
-namespace ExchangeOofScheduler.Core
+﻿namespace ExchangeOofScheduler.Core
 {
   public interface IApplicationSettings
   {
     string userEmail { get; }
     bool debugModeEnabled { get; }
 
-    DayOfWeek startDay { get; }
-    TimeSpan startTime { get; }
-    DayOfWeek endDay { get; }
-    TimeSpan endTime { get; }
+    OofSchedule oofSchedule { get; }
     
     string internalReply { get; }
     string sendToExternalRecipients { get; }

@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace ExchangeOofScheduler.Core.Dates
+﻿namespace ExchangeOofScheduler.Core.Dates
 {
   public interface IDateRangeCalculator
   {
-    DateRange CalculateNextDateRangeForOof(DayOfWeek startDay, TimeSpan startTime, DayOfWeek endDay, TimeSpan endTime);
+    DateRange CalculateNextDateRangeForOof(OofSchedule schedule);
   }
 }

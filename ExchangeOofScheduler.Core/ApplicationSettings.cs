@@ -1,6 +1,4 @@
-﻿using ExchangeOofScheduler.Core.Dates;
-using System;
-using System.Collections.Specialized;
+﻿using System.Collections.Specialized;
 using System.Configuration;
 
 namespace ExchangeOofScheduler.Core
@@ -8,13 +6,12 @@ namespace ExchangeOofScheduler.Core
   public class ApplicationSettings : IApplicationSettings
   {
     private readonly NameValueCollection applicationSettings;
-    private readonly DayOfWeekReader DayOfWeekReader;
+    private readonly OofScheduleBuilder oofScheduleBuilder;
 
-
-    public ApplicationSettings(DayOfWeekReader dayOfWeekReader)
+    public ApplicationSettings(OofScheduleBuilder oofScheduleBuilder)
     {
       applicationSettings = ConfigurationManager.GetSection("OutOfOfficeSettings") as NameValueCollection;
-      this.DayOfWeekReader = dayOfWeekReader;
+      this.oofScheduleBuilder = oofScheduleBuilder;
     }
 
     public string userEmail
@@ -30,24 +27,15 @@ namespace ExchangeOofScheduler.Core
       get { return bool.Parse(applicationSettings["debugModeEnabled"]); }
     }
 
-    public DayOfWeek startDay
+    public OofSchedule oofSchedule
     {
-      get { return DayOfWeekReader.Read(applicationSettings["startDay"]); }
-    }
-
-    public TimeSpan startTime
-    {
-      get { return DateTime.Parse(applicationSettings["startTime"]).TimeOfDay; }
-    }
-
-    public DayOfWeek endDay
-    {
-      get { return DayOfWeekReader.Read(applicationSettings["endDay"]); }
-    }
-
-    public TimeSpan endTime
-    {
-      get { return DateTime.Parse(applicationSettings["endTime"]).TimeOfDay; }
+      get
+      {
+        return oofScheduleBuilder.Build(applicationSettings["startDay"],
+                               applicationSettings["boundaryTime"],
+                               applicationSettings["endDay"],
+                               applicationSettings["boundaryTime"]);
+      }
     }
 
     public string internalReply

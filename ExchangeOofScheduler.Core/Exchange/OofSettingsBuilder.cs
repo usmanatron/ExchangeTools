@@ -19,7 +19,7 @@ namespace ExchangeOofScheduler.Core.Exchange
 
     public OofSettings Build()
     {
-      var dateRange = dateRangeCalculator.CalculateNextDateRangeForOof(applicationSettings.startDay, applicationSettings.startTime, applicationSettings.endDay, applicationSettings.endTime);
+      var dateRange = dateRangeCalculator.CalculateNextDateRangeForOof(applicationSettings.oofSchedule);
       oofSettings.Duration = new TimeWindow(dateRange.Start, dateRange.End);
       oofSettings.ExternalReply = new OofReply(applicationSettings.externalReply);
       oofSettings.InternalReply = new OofReply(applicationSettings.internalReply);

@@ -26,7 +26,8 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
     [Test]
     public void DateBeforeWednesday_ChoosesNextWeek()
     {
-      var range = dateRangeCalculator.CalculateNextDateRangeForOof(DayOfWeek.Monday, startTime, DayOfWeek.Monday, endTime);
+      var schedule = new OofSchedule(DayOfWeek.Monday, startTime, DayOfWeek.Monday, endTime);
+      var range = dateRangeCalculator.CalculateNextDateRangeForOof(schedule);
 
       // Sunday 6pm - Monday 6pm
       Assert.AreEqual(new DateTime(2015, 1, 18, 17, 30, 0), range.Start);
@@ -36,7 +37,8 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
     [Test]
     public void DateAfterWednesday_ChoosesSameWeek()
     {
-      var range = dateRangeCalculator.CalculateNextDateRangeForOof(DayOfWeek.Friday, startTime, DayOfWeek.Friday, endTime);
+      var schedule = new OofSchedule(DayOfWeek.Friday, startTime, DayOfWeek.Friday, endTime);
+      var range = dateRangeCalculator.CalculateNextDateRangeForOof(schedule);
 
       // Thursday 6pm - Friday 6pm
       Assert.AreEqual(new DateTime(2015, 1, 15, 17, 30, 0), range.Start);
@@ -46,7 +48,8 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
     [Test]
     public void DateIsWednesday_ChoosesSameWeek()
     {
-      var range = dateRangeCalculator.CalculateNextDateRangeForOof(DayOfWeek.Wednesday, startTime, DayOfWeek.Wednesday, endTime);
+      var schedule = new OofSchedule(DayOfWeek.Wednesday, startTime, DayOfWeek.Wednesday, endTime);
+      var range = dateRangeCalculator.CalculateNextDateRangeForOof(schedule);
 
       // Thursday 6pm - Friday 6pm
       Assert.AreEqual(new DateTime(2015, 1, 13, 17, 30, 0), range.Start);
@@ -56,7 +59,8 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
     [Test]
     public void DateRangeAfterWednesday_SpanningMultipleDays_GivesExpectedRangeInSameWeek()
     {
-      var range = dateRangeCalculator.CalculateNextDateRangeForOof(DayOfWeek.Thursday, startTime, DayOfWeek.Friday, endTime);
+      var schedule = new OofSchedule(DayOfWeek.Thursday, startTime, DayOfWeek.Friday, endTime);
+      var range = dateRangeCalculator.CalculateNextDateRangeForOof(schedule);
 
       // Wednesday 6pm - Friday 6pm
       Assert.AreEqual(new DateTime(2015, 1, 14, 17, 30, 0), range.Start);
@@ -66,7 +70,8 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
     [Test]
     public void DateRangeBeforeWednesday_SpanningMultipleDays_GivesExpectedRangeNextWeek()
     {
-      var range = dateRangeCalculator.CalculateNextDateRangeForOof(DayOfWeek.Monday, startTime, DayOfWeek.Tuesday, endTime);
+      var schedule = new OofSchedule(DayOfWeek.Monday, startTime, DayOfWeek.Tuesday, endTime);
+      var range = dateRangeCalculator.CalculateNextDateRangeForOof(schedule);
 
       // Sunday 6pm - Tuesday 6pm
       Assert.AreEqual(new DateTime(2015, 1, 18, 17, 30, 0), range.Start);
@@ -76,7 +81,8 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
     [Test]
     public void DateRangeStartingWednesday_SelectsThisWeek()
     {
-      var range = dateRangeCalculator.CalculateNextDateRangeForOof(DayOfWeek.Wednesday, startTime, DayOfWeek.Friday, endTime);
+      var schedule = new OofSchedule(DayOfWeek.Wednesday, startTime, DayOfWeek.Friday, endTime);
+      var range = dateRangeCalculator.CalculateNextDateRangeForOof(schedule);
 
       // Tuesday 6pm (yesterday!) - Friday 6pm
       Assert.AreEqual(new DateTime(2015, 1, 13, 17, 30, 0), range.Start);
@@ -86,7 +92,8 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
     [Test]
     public void DateRangeEndingOnWednesday_SelectsNextWeek()
     {
-      var range = dateRangeCalculator.CalculateNextDateRangeForOof(DayOfWeek.Monday, startTime, DayOfWeek.Wednesday, endTime);
+      var schedule = new OofSchedule(DayOfWeek.Monday, startTime, DayOfWeek.Wednesday, endTime);
+      var range = dateRangeCalculator.CalculateNextDateRangeForOof(schedule);
 
       // Sunday 6pm (next week) - Wednesday 6pm (next week)
       Assert.AreEqual(new DateTime(2015, 1, 18, 17, 30, 0), range.Start);
@@ -96,7 +103,8 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
     [Test]
     public void DateRangeSpanningBetweenWednesday_SelectsThisWeek()
     {
-      var range = dateRangeCalculator.CalculateNextDateRangeForOof(DayOfWeek.Tuesday, startTime, DayOfWeek.Thursday, endTime);
+      var schedule = new OofSchedule(DayOfWeek.Tuesday, startTime, DayOfWeek.Thursday, endTime);
+      var range = dateRangeCalculator.CalculateNextDateRangeForOof(schedule);
 
       // Monday (in the past) 6pm - Thursday 6pm
       Assert.AreEqual(new DateTime(2015, 1, 12, 17, 30, 0), range.Start);
@@ -106,7 +114,8 @@ namespace ExchangeOofScheduler.Core.Tests.Dates
     [Test]
     public void DateRangeSpanningWeekend_GivesExpectedRange()
     {
-      var range = dateRangeCalculator.CalculateNextDateRangeForOof(DayOfWeek.Friday, startTime, DayOfWeek.Monday, endTime);
+      var schedule = new OofSchedule(DayOfWeek.Friday, startTime, DayOfWeek.Monday, endTime);
+      var range = dateRangeCalculator.CalculateNextDateRangeForOof(schedule);
 
       // Thursday - Monday the next week
       Assert.AreEqual(new DateTime(2015, 1, 15, 17, 30, 0), range.Start);
