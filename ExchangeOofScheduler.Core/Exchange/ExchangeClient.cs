@@ -3,6 +3,11 @@ using System;
 
 namespace ExchangeOofScheduler.Core.Exchange
 {
+  /// <remarks>
+  ///   Suppress NCrunch testing on this class, as it requires a connection to Exchange (which we currently
+  ///   cannot fake easily). This has also been suppressed when generating Opencover reports
+  /// </remarks>
+  //ncrunch: no coverage start
   public class ExchangeClient : IExchangeClient
   {
     private readonly ExchangeService exchangeService;
@@ -62,4 +67,6 @@ namespace ExchangeOofScheduler.Core.Exchange
       message.Send();
     }
   }
+
+  //ncrunch: no coverage end
 }
