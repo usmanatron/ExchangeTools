@@ -22,22 +22,22 @@ namespace ExchangeOofScheduler.Core.Exchange
     public OofSettings Build()
     {
       var oofSchedule = oofScheduleBuilder.Build(
-        applicationSettings.startDay,
-        applicationSettings.boundaryTime,
-        applicationSettings.endDay,
-        applicationSettings.boundaryTime);
+        applicationSettings.StartDay,
+        applicationSettings.BoundaryTime,
+        applicationSettings.EndDay,
+        applicationSettings.BoundaryTime);
 
       var dateRange = dateRangeCalculator.CalculateNextDateRangeForOof(oofSchedule);
       oofSettings.Duration = new TimeWindow(dateRange.Start, dateRange.End);
-      oofSettings.ExternalReply = new OofReply(applicationSettings.externalReply);
-      oofSettings.InternalReply = new OofReply(applicationSettings.internalReply);
+      oofSettings.ExternalReply = new OofReply(applicationSettings.ExternalReply);
+      oofSettings.InternalReply = new OofReply(applicationSettings.InternalReply);
       oofSettings.ExternalAudience = GetExternalAudienceSetting();
       return oofSettings;
     }
 
     private OofExternalAudience GetExternalAudienceSetting()
     {
-      var configValue = applicationSettings.sendToExternalRecipients.ToLower();
+      var configValue = applicationSettings.SendToExternalRecipients.ToLower();
       switch (configValue)
       {
         case "none":
@@ -52,7 +52,7 @@ namespace ExchangeOofScheduler.Core.Exchange
         default:
           var message =
             string.Format(
-              "Unexpected value for \"sendToExternalRecipients\" ({0}). Expected values are None,All and Known.",
+              "Unexpected value for \"SendToExternalRecipients\" ({0}). Expected values are None,All and Known.",
               configValue);
           throw new ArgumentException(message);
       }

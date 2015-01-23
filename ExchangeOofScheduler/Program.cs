@@ -12,7 +12,7 @@ namespace ExchangeOofScheduler
     private static void Main()
     {
       var kernel = SetupNinjectKernel();
-      var isDebugMode = kernel.Get<ApplicationSettings>().debugModeEnabled;
+      var isDebugMode = kernel.Get<ApplicationSettings>().DebugModeEnabled;
 
       kernel.Get<OofScheduler>().ScheduleOof();
       if (isDebugMode)

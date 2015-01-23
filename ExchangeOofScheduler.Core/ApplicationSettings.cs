@@ -12,50 +12,50 @@ namespace ExchangeOofScheduler.Core
       applicationSettings = ConfigurationManager.GetSection("OutOfOfficeSettings") as NameValueCollection;
     }
 
-    public string userEmail
+    public string UserEmail
     {
       get
       {
-        return applicationSettings["userEmail"];
+        return applicationSettings["UserEmail"];
       }
     }
 
-    public bool debugModeEnabled
+    public bool DebugModeEnabled
     {
-      get { return bool.Parse(applicationSettings["debugModeEnabled"]); }
+      get { return bool.Parse(applicationSettings["DebugModeEnabled"]); }
     }
 
-    public string startDay
+    public string StartDay
     {
-      get { return applicationSettings["startDay"]; }
+      get { return applicationSettings["StartDay"]; }
     }
 
-    public string boundaryTime
+    public string BoundaryTime
     {
-      get { return applicationSettings["boundaryTime"]; }
+      get { return applicationSettings["BoundaryTime"]; }
     }
 
-    public string endDay
+    public string EndDay
     {
-      get { return applicationSettings["endDay"]; }
+      get { return applicationSettings["EndDay"]; }
     }
 
-    public string internalReply
+    public string InternalReply
     {
-      get { return applicationSettings["internalReply"]; }
+      get { return applicationSettings["InternalReply"]; }
     }
 
-    public string sendToExternalRecipients
+    public string SendToExternalRecipients
     {
       get
       {
-        return applicationSettings["sendToExternalRecipients"];
+        return applicationSettings["SendToExternalRecipients"];
       }
     }
 
-    public string externalReply
+    public string ExternalReply
     {
-      get { return applicationSettings["externalReply"]; }
+      get { return applicationSettings["ExternalReply"]; }
     }
   }
 }

@@ -2,20 +2,20 @@
 {
   public interface IApplicationSettings
   {
-    string userEmail { get; }
+    string UserEmail { get; }
 
-    bool debugModeEnabled { get; }
+    bool DebugModeEnabled { get; }
 
-    string startDay { get; }
+    string StartDay { get; }
 
-    string boundaryTime { get; }
+    string BoundaryTime { get; }
 
-    string endDay { get; }
+    string EndDay { get; }
 
-    string internalReply { get; }
+    string InternalReply { get; }
 
-    string sendToExternalRecipients { get; }
+    string SendToExternalRecipients { get; }
 
-    string externalReply { get; }
+    string ExternalReply { get; }
   }
 }

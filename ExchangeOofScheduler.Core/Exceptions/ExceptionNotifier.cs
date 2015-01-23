@@ -23,7 +23,7 @@ namespace ExchangeOofScheduler.Core.Exceptions
       var body = GetMessageBody(e);
       exchangeClient.SendEmailToSelf(subject, body);
 
-      if (settings.debugModeEnabled)
+      if (settings.DebugModeEnabled)
       {
         Console.WriteLine(body);
       }

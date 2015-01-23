@@ -18,13 +18,13 @@ namespace ExchangeOofScheduler.Core.Exchange
     {
       var service = new ExchangeService { UseDefaultCredentials = true };
 
-      if (this.settings.debugModeEnabled)
+      if (this.settings.DebugModeEnabled)
       {
         service.TraceEnabled = true;
         service.TraceFlags = TraceFlags.All;
       }
 
-      service.AutodiscoverUrl(this.settings.userEmail, ValidateRedirectionUrl);
+      service.AutodiscoverUrl(this.settings.UserEmail, ValidateRedirectionUrl);
       return service;
     }
 
@@ -41,23 +41,23 @@ namespace ExchangeOofScheduler.Core.Exchange
 
     public OofSettings GetOofSettings()
     {
-      return exchangeService.GetUserOofSettings(settings.userEmail);
+      return exchangeService.GetUserOofSettings(settings.UserEmail);
     }
 
     public void SetOofSettings(OofSettings oofSettings)
     {
-      exchangeService.SetUserOofSettings(settings.userEmail, oofSettings);
+      exchangeService.SetUserOofSettings(settings.UserEmail, oofSettings);
     }
 
     public void SendEmailToSelf(string subject, string body)
     {
       var message = new EmailMessage(exchangeService)
               {
-                From = settings.userEmail,
+                From = settings.UserEmail,
                 Subject = subject,
                 Body = new MessageBody(BodyType.HTML, body)
               };
-      message.ToRecipients.Add(settings.userEmail);
+      message.ToRecipients.Add(settings.UserEmail);
 
       message.Send();
     }
