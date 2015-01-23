@@ -6,12 +6,10 @@ namespace ExchangeOofScheduler.Core
   public class ApplicationSettings : IApplicationSettings
   {
     private readonly NameValueCollection applicationSettings;
-    private readonly OofScheduleBuilder oofScheduleBuilder;
 
-    public ApplicationSettings(OofScheduleBuilder oofScheduleBuilder)
+    public ApplicationSettings()
     {
       applicationSettings = ConfigurationManager.GetSection("OutOfOfficeSettings") as NameValueCollection;
-      this.oofScheduleBuilder = oofScheduleBuilder;
     }
 
     public string userEmail
@@ -27,15 +25,19 @@ namespace ExchangeOofScheduler.Core
       get { return bool.Parse(applicationSettings["debugModeEnabled"]); }
     }
 
-    public OofSchedule oofSchedule
+    public string startDay
     {
-      get
-      {
-        return oofScheduleBuilder.Build(applicationSettings["startDay"],
-                               applicationSettings["boundaryTime"],
-                               applicationSettings["endDay"],
-                               applicationSettings["boundaryTime"]);
-      }
+      get { return applicationSettings["startDay"]; }
+    }
+
+    public string boundaryTime
+    {
+      get { return applicationSettings["boundaryTime"]; }
+    }
+
+    public string endDay
+    {
+      get { return applicationSettings["endDay"]; }
     }
 
     public string internalReply

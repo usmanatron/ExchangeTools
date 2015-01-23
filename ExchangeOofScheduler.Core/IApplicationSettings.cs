@@ -6,7 +6,11 @@
 
     bool debugModeEnabled { get; }
 
-    OofSchedule oofSchedule { get; }
+    string startDay { get; }
+
+    string boundaryTime { get; }
+
+    string endDay { get; }
 
     string internalReply { get; }
 
