@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dates\IDateRangeCalculator.cs" />
+    <Compile Include="Dates\IDayOfWeekReader.cs" />
     <Compile Include="Exchange\IOofSettingsBuilder.cs" />
     <Compile Include="IApplicationSettings.cs" />
     <Compile Include="Dates\DateRange.cs" />

@@ -2,7 +2,7 @@
 
 namespace ExchangeOofScheduler.Core.Dates
 {
-  public class DayOfWeekReader
+  public class DayOfWeekReader : IDayOfWeekReader
   {
     private const int expectedInputLength = 2;
 

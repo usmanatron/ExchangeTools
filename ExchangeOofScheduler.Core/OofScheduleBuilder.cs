@@ -5,9 +5,9 @@ namespace ExchangeOofScheduler.Core
 {
   public class OofScheduleBuilder : IOofScheduleBuilder
   {
-    private readonly DayOfWeekReader dayOfWeekReader;
+    private readonly IDayOfWeekReader dayOfWeekReader;
 
-    public OofScheduleBuilder(DayOfWeekReader dayOfWeekReader)
+    public OofScheduleBuilder(IDayOfWeekReader dayOfWeekReader)
     {
       this.dayOfWeekReader = dayOfWeekReader;
     }
