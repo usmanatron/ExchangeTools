@@ -9,9 +9,9 @@ namespace ExchangeOofScheduler.Core.Exchange
     private readonly OofSettings oofSettings;
     private readonly IApplicationSettings applicationSettings;
     private readonly IDateRangeCalculator dateRangeCalculator;
-    private readonly OofScheduleBuilder oofScheduleBuilder;
+    private readonly IOofScheduleBuilder oofScheduleBuilder;
 
-    public OofSettingsBuilder(IApplicationSettings applicationSettings, IDateRangeCalculator dateRangeCalculator, OofScheduleBuilder oofScheduleBuilder)
+    public OofSettingsBuilder(IApplicationSettings applicationSettings, IDateRangeCalculator dateRangeCalculator, IOofScheduleBuilder oofScheduleBuilder)
     {
       this.applicationSettings = applicationSettings;
       this.dateRangeCalculator = dateRangeCalculator;
@@ -52,7 +52,7 @@ namespace ExchangeOofScheduler.Core.Exchange
         default:
           var message =
             string.Format(
-              "Unexpected value for \"SendToExternalRecipients\" ({0}). Expected values are None,All and Known.",
+              "Unexpected value for \"SendToExternalRecipients\" ({0}). Expected values are None, All and Known.",
               configValue);
           throw new ArgumentException(message);
       }

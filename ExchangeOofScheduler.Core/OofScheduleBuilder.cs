@@ -3,7 +3,7 @@ using System;
 
 namespace ExchangeOofScheduler.Core
 {
-  public class OofScheduleBuilder
+  public class OofScheduleBuilder : IOofScheduleBuilder
   {
     private readonly DayOfWeekReader dayOfWeekReader;
 

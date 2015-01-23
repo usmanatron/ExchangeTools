@@ -69,6 +69,7 @@
     <Compile Include="Dates\DayOfWeekReaderTests.cs" />
     <Compile Include="Dates\TestClock.cs" />
     <Compile Include="Exceptions\ExceptionNotifierTests.cs" />
+    <Compile Include="Exchange\OofSettingsBuilderTests.cs" />
     <Compile Include="OutOfOfficeSetterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
