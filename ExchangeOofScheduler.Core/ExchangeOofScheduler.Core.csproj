@@ -55,14 +55,14 @@
     <Compile Include="Dates\IDateRangeCalculator.cs" />
     <Compile Include="Dates\IDayOfWeekReader.cs" />
     <Compile Include="Exchange\IOofSettingsBuilder.cs" />
-    <Compile Include="IApplicationSettings.cs" />
+    <Compile Include="Config\IApplicationSettings.cs" />
     <Compile Include="Dates\DateRange.cs" />
     <Compile Include="Dates\DateRangeCalculator.cs" />
     <Compile Include="Dates\DayOfWeekReader.cs" />
     <Compile Include="Dates\IClock.cs" />
     <Compile Include="Dates\SystemClock.cs" />
     <Compile Include="Exchange\ExchangeClient.cs" />
-    <Compile Include="ApplicationSettings.cs" />
+    <Compile Include="Config\ApplicationSettings.cs" />
     <Compile Include="Exchange\IExchangeClient.cs" />
     <Compile Include="Exchange\OofSettingsBuilder.cs" />
     <Compile Include="Exceptions\IExceptionNotifier.cs" />

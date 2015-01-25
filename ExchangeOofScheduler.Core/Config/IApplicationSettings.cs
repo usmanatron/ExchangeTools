@@ -1,4 +1,4 @@
-﻿namespace ExchangeOofScheduler.Core
+﻿namespace ExchangeOofScheduler.Core.Config
 {
   public interface IApplicationSettings
   {

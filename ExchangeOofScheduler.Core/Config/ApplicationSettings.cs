@@ -1,8 +1,6 @@
-using ExchangeOofScheduler.Core.Config;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace ExchangeOofScheduler.Core
+namespace ExchangeOofScheduler.Core.Config
 {
   public class ApplicationSettings : IApplicationSettings
   {

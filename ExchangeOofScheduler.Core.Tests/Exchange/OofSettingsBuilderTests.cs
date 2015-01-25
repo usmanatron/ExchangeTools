@@ -1,4 +1,5 @@
-﻿using ExchangeOofScheduler.Core.Dates;
+﻿using ExchangeOofScheduler.Core.Config;
+using ExchangeOofScheduler.Core.Dates;
 using ExchangeOofScheduler.Core.Exchange;
 using FakeItEasy;
 using Microsoft.Exchange.WebServices.Data;

@@ -1,4 +1,5 @@
 ﻿using ExchangeOofScheduler.Core;
+using ExchangeOofScheduler.Core.Config;
 using ExchangeOofScheduler.Core.Exceptions;
 using ExchangeOofScheduler.Core.Exchange;
 using FakeItEasy;

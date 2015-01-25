@@ -1,4 +1,5 @@
-﻿using Microsoft.Exchange.WebServices.Data;
+﻿using ExchangeOofScheduler.Core.Config;
+using Microsoft.Exchange.WebServices.Data;
 using System;
 
 namespace ExchangeOofScheduler.Core.Exchange
