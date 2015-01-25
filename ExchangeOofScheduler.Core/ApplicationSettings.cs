@@ -1,4 +1,5 @@
-﻿using System.Collections.Specialized;
+using Ninject;
+using System.Collections.Specialized;
 using System.Configuration;
 
 namespace ExchangeOofScheduler.Core
@@ -7,9 +8,16 @@ namespace ExchangeOofScheduler.Core
   {
     private readonly NameValueCollection applicationSettings;
 
+    [Inject]
     public ApplicationSettings()
+      : this(ConfigurationManager.AppSettings)
     {
-      applicationSettings = ConfigurationManager.GetSection("OutOfOfficeSettings") as NameValueCollection;
+    }
+
+    // Used for testing
+    public ApplicationSettings(NameValueCollection applicationSettings)
+    {
+      this.applicationSettings = applicationSettings;
     }
 
     public string UserEmail
