@@ -64,6 +64,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Config\ApplicationSettingsTests.cs" />
+    <Compile Include="Config\StringSettingsTestCase.cs" />
     <Compile Include="Dates\DateRangeCalculatorTests.cs" />
     <Compile Include="Dates\DateRangeTests.cs" />
     <Compile Include="Dates\DayOfWeekReaderTests.cs" />
