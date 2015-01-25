@@ -49,6 +49,7 @@ namespace ExchangeOofScheduler.Core.Tests.Config
 
     [Test]
     [TestCase("")]
+    [TestCase("NotABoolean!")]
     public void InvalidDebugModeSetting_Throws(string setting)
     {
       A.CallTo(() => config["DebugModeEnabled"]).Returns(setting);
