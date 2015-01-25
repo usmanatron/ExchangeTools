@@ -1,4 +1,5 @@
 ﻿using ExchangeOofScheduler.Core;
+using ExchangeOofScheduler.Core.Config;
 using ExchangeOofScheduler.Core.Dates;
 using ExchangeOofScheduler.Core.Exceptions;
 using ExchangeOofScheduler.Core.Exchange;
@@ -32,6 +33,7 @@ namespace ExchangeOofScheduler
       kernel.Bind<IOutOfOfficeSetter>().To<OutOfOfficeSetter>();
       kernel.Bind<IDayOfWeekReader>().To<DayOfWeekReader>();
       kernel.Bind<IDateRangeCalculator>().To<DateRangeCalculator>();
+      kernel.Bind<IConfiguration>().To<ApplicationConfiguration>();
       kernel.Bind<IExchangeClient>().To<ExchangeClient>().InSingletonScope();
       kernel.Bind<ApplicationSettings>().ToSelf().InSingletonScope();
       return kernel;

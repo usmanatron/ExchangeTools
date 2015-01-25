@@ -1,23 +1,16 @@
-using Ninject;
-using System.Collections.Specialized;
-using System.Configuration;
+using ExchangeOofScheduler.Core.Config;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace ExchangeOofScheduler.Core
 {
   public class ApplicationSettings : IApplicationSettings
   {
-    private readonly NameValueCollection applicationSettings;
+    private readonly IDictionary<string, string> applicationSettings;
 
-    [Inject]
-    public ApplicationSettings()
-      : this(ConfigurationManager.AppSettings)
+    public ApplicationSettings(IConfiguration configuration)
     {
-    }
-
-    // Used for testing
-    public ApplicationSettings(NameValueCollection applicationSettings)
-    {
-      this.applicationSettings = applicationSettings;
+      this.applicationSettings = configuration.Config;
     }
 
     public string UserEmail

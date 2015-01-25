@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\ApplicationConfiguration.cs" />
+    <Compile Include="Config\IConfiguration.cs" />
     <Compile Include="Dates\IDateRangeCalculator.cs" />
     <Compile Include="Dates\IDayOfWeekReader.cs" />
     <Compile Include="Exchange\IOofSettingsBuilder.cs" />
