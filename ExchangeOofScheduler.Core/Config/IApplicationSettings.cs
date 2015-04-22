@@ -12,10 +12,10 @@
 
     string EndDay { get; }
 
-    string InternalReply { get; }
+    string InternalReplyFilename { get; }
 
     string SendToExternalRecipients { get; }
 
-    string ExternalReply { get; }
+    string ExternalReplyFilename { get; }
   }
 }

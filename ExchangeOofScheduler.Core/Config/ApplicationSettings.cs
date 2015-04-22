@@ -39,9 +39,9 @@ namespace ExchangeOofScheduler.Core.Config
       get { return applicationSettings["EndDay"]; }
     }
 
-    public string InternalReply
+    public string InternalReplyFilename
     {
-      get { return applicationSettings["InternalReply"]; }
+      get { return applicationSettings["InternalReplyFilename"]; }
     }
 
     public string SendToExternalRecipients
@@ -52,9 +52,9 @@ namespace ExchangeOofScheduler.Core.Config
       }
     }
 
-    public string ExternalReply
+    public string ExternalReplyFilename
     {
-      get { return applicationSettings["ExternalReply"]; }
+      get { return applicationSettings["ExternalReplyFilename"]; }
     }
   }
 }

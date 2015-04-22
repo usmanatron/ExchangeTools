@@ -54,6 +54,8 @@
     <Compile Include="Config\IConfiguration.cs" />
     <Compile Include="Dates\IDateRangeCalculator.cs" />
     <Compile Include="Dates\IDayOfWeekReader.cs" />
+    <Compile Include="Exchange\FileReader.cs" />
+    <Compile Include="Exchange\IFileReader.cs" />
     <Compile Include="Exchange\IOofSettingsBuilder.cs" />
     <Compile Include="Config\IApplicationSettings.cs" />
     <Compile Include="Dates\DateRange.cs" />
@@ -81,7 +83,14 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ExternalReply.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InternalReply.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

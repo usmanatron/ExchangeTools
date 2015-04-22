@@ -63,8 +63,8 @@ namespace ExchangeOofScheduler.Core.Tests.Config
         new StringSettingsTestCase(() => config["StartDay"], "We", () => applicationSettings.StartDay),
         new StringSettingsTestCase(() => config["EndDay"], "Fr", () => applicationSettings.EndDay),
         new StringSettingsTestCase(() => config["BoundaryTime"], "17:30:00", () => applicationSettings.BoundaryTime),
-        new StringSettingsTestCase(() => config["InternalReply"], "Internal Reply", () => applicationSettings.InternalReply),
-        new StringSettingsTestCase(() => config["ExternalReply"], "External Reply", () => applicationSettings.ExternalReply),
+        new StringSettingsTestCase(() => config["InternalReplyFilename"], "Internal Reply", () => applicationSettings.InternalReplyFilename),
+        new StringSettingsTestCase(() => config["ExternalReplyFilename"], "External Reply", () => applicationSettings.ExternalReplyFilename),
         new StringSettingsTestCase(() => config["SendToExternalRecipients"], "Known", () => applicationSettings.SendToExternalRecipients)
       };
   }

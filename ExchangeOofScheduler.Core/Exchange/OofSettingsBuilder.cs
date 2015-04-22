@@ -11,12 +11,14 @@ namespace ExchangeOofScheduler.Core.Exchange
     private readonly IApplicationSettings applicationSettings;
     private readonly IDateRangeCalculator dateRangeCalculator;
     private readonly IOofScheduleBuilder oofScheduleBuilder;
+    private readonly IFileReader fileReader;
 
-    public OofSettingsBuilder(IApplicationSettings applicationSettings, IDateRangeCalculator dateRangeCalculator, IOofScheduleBuilder oofScheduleBuilder)
+    public OofSettingsBuilder(IApplicationSettings applicationSettings, IDateRangeCalculator dateRangeCalculator, IOofScheduleBuilder oofScheduleBuilder, IFileReader fileReader)
     {
       this.applicationSettings = applicationSettings;
       this.dateRangeCalculator = dateRangeCalculator;
       this.oofScheduleBuilder = oofScheduleBuilder;
+      this.fileReader = fileReader;
       oofSettings = new OofSettings { State = OofState.Scheduled };
     }
 
@@ -30,8 +32,8 @@ namespace ExchangeOofScheduler.Core.Exchange
 
       var dateRange = dateRangeCalculator.CalculateNextDateRangeForOof(oofSchedule);
       oofSettings.Duration = new TimeWindow(dateRange.Start, dateRange.End);
-      oofSettings.ExternalReply = new OofReply(applicationSettings.ExternalReply);
-      oofSettings.InternalReply = new OofReply(applicationSettings.InternalReply);
+      oofSettings.ExternalReply = new OofReply(fileReader.GetFileContents(applicationSettings.ExternalReplyFilename));
+      oofSettings.InternalReply = new OofReply(fileReader.GetFileContents(applicationSettings.InternalReplyFilename));
       oofSettings.ExternalAudience = GetExternalAudienceSetting();
       return oofSettings;
     }

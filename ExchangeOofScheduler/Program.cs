@@ -31,6 +31,7 @@ namespace ExchangeOofScheduler
       kernel.Bind<IExceptionNotifier>().To<ExceptionNotifier>();
       kernel.Bind<IOofSettingsBuilder>().To<OofSettingsBuilder>();
       kernel.Bind<IOofScheduleBuilder>().To<OofScheduleBuilder>();
+      kernel.Bind<IFileReader>().To<FileReader>();
       kernel.Bind<IOutOfOfficeSetter>().To<OutOfOfficeSetter>();
       kernel.Bind<IDayOfWeekReader>().To<DayOfWeekReader>();
       kernel.Bind<IDateRangeCalculator>().To<DateRangeCalculator>();
