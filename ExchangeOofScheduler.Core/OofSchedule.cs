@@ -7,20 +7,20 @@ namespace ExchangeOofScheduler.Core
   /// </summary>
   public class OofSchedule
   {
-    public DayOfWeek startDay { get; private set; }
+    public DayOfWeek StartDay { get; private set; }
 
-    public TimeSpan startTime { get; private set; }
+    public TimeSpan StartTime { get; private set; }
 
-    public DayOfWeek endDay { get; private set; }
+    public DayOfWeek EndDay { get; private set; }
 
-    public TimeSpan endTime { get; private set; }
+    public TimeSpan EndTime { get; private set; }
 
     public OofSchedule(DayOfWeek startDay, TimeSpan startTime, DayOfWeek endDay, TimeSpan endTime)
     {
-      this.startDay = startDay;
-      this.startTime = startTime;
-      this.endDay = endDay;
-      this.endTime = endTime;
+      StartDay = startDay;
+      StartTime = startTime;
+      EndDay = endDay;
+      EndTime = endTime;
     }
   }
 }

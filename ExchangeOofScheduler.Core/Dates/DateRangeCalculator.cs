@@ -19,8 +19,8 @@ namespace ExchangeOofScheduler.Core.Dates
     public DateRange CalculateNextDateRangeForOof(OofSchedule schedule)
     {
       var datetimeNow = clock.Now;
-      var oofStartDate = GetNextDateForDayOfWeek(datetimeNow, schedule.startDay);
-      var oofEndDate = GetNextDateForDayOfWeek(datetimeNow, schedule.endDay);
+      var oofStartDate = GetNextDateForDayOfWeek(datetimeNow, schedule.StartDay);
+      var oofEndDate = GetNextDateForDayOfWeek(datetimeNow, schedule.EndDay);
 
       if (oofEndDate < oofStartDate)
       {
@@ -35,8 +35,8 @@ namespace ExchangeOofScheduler.Core.Dates
       }
 
       oofStartDate = oofStartDate.AddDays(-1);
-      oofStartDate = oofStartDate.Date + schedule.startTime;
-      oofEndDate = oofEndDate.Date + schedule.endTime;
+      oofStartDate = oofStartDate.Date + schedule.StartTime;
+      oofEndDate = oofEndDate.Date + schedule.EndTime;
 
       return new DateRange(oofStartDate, oofEndDate);
     }

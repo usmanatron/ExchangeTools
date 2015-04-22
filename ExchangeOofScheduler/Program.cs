@@ -18,6 +18,7 @@ namespace ExchangeOofScheduler
       kernel.Get<OofScheduler>().ScheduleOof();
       if (isDebugMode)
       {
+        Console.WriteLine("Press any key to continue...");
         Console.ReadLine();
       }
     }

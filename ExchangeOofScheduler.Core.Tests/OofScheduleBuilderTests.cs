@@ -31,8 +31,8 @@ namespace ExchangeOofScheduler.Core.Tests
     {
       var schedule = oofScheduleBuilder.Build(startDay, startTime, endDay, endTime);
 
-      Assert.AreEqual(DayOfWeek.Thursday, schedule.startDay);
-      Assert.AreEqual(DayOfWeek.Friday, schedule.endDay);
+      Assert.AreEqual(DayOfWeek.Thursday, schedule.StartDay);
+      Assert.AreEqual(DayOfWeek.Friday, schedule.EndDay);
     }
 
     [Test]
