@@ -63,7 +63,7 @@ namespace ExchangeOofScheduler.Core.Exchange
     {
       var message = new EmailMessage(exchangeService)
               {
-                From = mailMessage.From.Address,
+                From = mailMessage.Sender.Address,
                 Subject = mailMessage.Subject,
                 Body = new MessageBody(BodyType.HTML, mailMessage.Body)
               };

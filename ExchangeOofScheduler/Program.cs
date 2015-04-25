@@ -40,6 +40,7 @@ namespace ExchangeOofScheduler
       kernel.Bind<IConfiguration>().To<ApplicationConfiguration>();
       kernel.Bind<IExchangeClient>().To<ExchangeClient>().InSingletonScope();
       kernel.Bind<ApplicationSettings>().ToSelf().InSingletonScope();
+      kernel.Bind<IMailMessageBuilder>().To<MailMessageBuilder>();
       return kernel;
     }
   }
