@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExchangeOofScheduler.Core.Dates
+namespace ExchangeOofScheduler.Core.Entities
 {
   /// <summary>
   /// Idea from: http://stackoverflow.com/questions/43711/whats-a-good-way-to-overwrite-datetime-now-during-testing

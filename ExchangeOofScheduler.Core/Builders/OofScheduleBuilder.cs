@@ -1,7 +1,8 @@
 ﻿using ExchangeOofScheduler.Core.Dates;
+using ExchangeOofScheduler.Core.Entities;
 using System;
 
-namespace ExchangeOofScheduler.Core
+namespace ExchangeOofScheduler.Core.Builders
 {
   public class OofScheduleBuilder : IOofScheduleBuilder
   {

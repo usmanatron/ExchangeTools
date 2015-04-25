@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExchangeOofScheduler.Core.Entities;
+using System;
 
 namespace ExchangeOofScheduler.Core.Dates
 {

@@ -1,4 +1,6 @@
-﻿namespace ExchangeOofScheduler.Core
+﻿using ExchangeOofScheduler.Core.Entities;
+
+namespace ExchangeOofScheduler.Core.Builders
 {
   public interface IOofScheduleBuilder
   {

@@ -13,7 +13,6 @@ namespace ExchangeOofScheduler.Core.Exchange
       {
         filePath = Path.Combine(Environment.CurrentDirectory, filePath);
       }
-
       return File.ReadAllText(filePath);
     }
   }

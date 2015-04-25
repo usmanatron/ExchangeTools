@@ -56,28 +56,28 @@
     <Compile Include="Dates\IDayOfWeekReader.cs" />
     <Compile Include="Exchange\FileReader.cs" />
     <Compile Include="Exchange\IFileReader.cs" />
-    <Compile Include="Exchange\IOofSettingsBuilder.cs" />
+    <Compile Include="Builders\IOofSettingsBuilder.cs" />
     <Compile Include="Config\IApplicationSettings.cs" />
-    <Compile Include="Dates\DateRange.cs" />
+    <Compile Include="Entities\DateRange.cs" />
     <Compile Include="Dates\DateRangeCalculator.cs" />
     <Compile Include="Dates\DayOfWeekReader.cs" />
-    <Compile Include="Dates\IClock.cs" />
-    <Compile Include="Dates\SystemClock.cs" />
+    <Compile Include="Entities\IClock.cs" />
+    <Compile Include="Entities\SystemClock.cs" />
     <Compile Include="Exchange\ExchangeClient.cs" />
     <Compile Include="Config\ApplicationSettings.cs" />
     <Compile Include="Exchange\IExchangeClient.cs" />
-    <Compile Include="Exchange\OofSettingsBuilder.cs" />
+    <Compile Include="Builders\OofSettingsBuilder.cs" />
     <Compile Include="Exceptions\IExceptionNotifier.cs" />
     <Compile Include="Exceptions\OofAlreadyEnabledException.cs" />
     <Compile Include="Exceptions\ExceptionNotifier.cs" />
-    <Compile Include="IOofScheduleBuilder.cs" />
+    <Compile Include="Builders\IOofScheduleBuilder.cs" />
     <Compile Include="IOutOfOfficeSetter.cs" />
-    <Compile Include="OofSchedule.cs" />
+    <Compile Include="Entities\OofSchedule.cs" />
     <Compile Include="OutOfOfficeSetter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OofScheduleBuilder.cs" />
+    <Compile Include="Builders\OofScheduleBuilder.cs" />
     <None Include="ExchangeOofScheduler.Core.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -91,6 +91,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

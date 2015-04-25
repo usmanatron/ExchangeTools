@@ -67,12 +67,13 @@
     <Compile Include="Config\ApplicationSettingsTests.cs" />
     <Compile Include="Config\StringSettingsTestCase.cs" />
     <Compile Include="Dates\DateRangeCalculatorTests.cs" />
-    <Compile Include="Dates\DateRangeTests.cs" />
+    <Compile Include="Entities\DateRangeTests.cs" />
     <Compile Include="Dates\DayOfWeekReaderTests.cs" />
-    <Compile Include="Dates\TestClock.cs" />
+    <Compile Include="Entities\TestClock.cs" />
     <Compile Include="Exceptions\ExceptionNotifierTests.cs" />
-    <Compile Include="Exchange\OofSettingsBuilderTests.cs" />
-    <Compile Include="OofScheduleBuilderTests.cs" />
+    <Compile Include="Exchange\FileReaderTests.cs" />
+    <Compile Include="Builders\OofSettingsBuilderTests.cs" />
+    <Compile Include="Builders\OofScheduleBuilderTests.cs" />
     <Compile Include="OutOfOfficeSetterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -84,6 +85,11 @@
       <Project>{0a85c88d-f9c8-458a-b376-289019f2a3b9}</Project>
       <Name>ExchangeOofScheduler.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestFile.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

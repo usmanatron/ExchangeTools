@@ -1,4 +1,6 @@
 ﻿using ExchangeOofScheduler.Core.Dates;
+using ExchangeOofScheduler.Core.Entities;
+using ExchangeOofScheduler.Core.Tests.Entities;
 using NUnit.Framework;
 using System;
 

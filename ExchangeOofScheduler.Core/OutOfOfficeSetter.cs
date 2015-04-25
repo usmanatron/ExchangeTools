@@ -1,4 +1,5 @@
-﻿using ExchangeOofScheduler.Core.Exceptions;
+﻿using ExchangeOofScheduler.Core.Builders;
+using ExchangeOofScheduler.Core.Exceptions;
 using ExchangeOofScheduler.Core.Exchange;
 using Microsoft.Exchange.WebServices.Data;
 

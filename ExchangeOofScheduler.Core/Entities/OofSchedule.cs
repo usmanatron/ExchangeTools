@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExchangeOofScheduler.Core
+namespace ExchangeOofScheduler.Core.Entities
 {
   /// <summary>
   /// Defines an OOF Schedule (essentially a start day and time and end day and time)
