@@ -30,11 +30,14 @@ namespace ExchangeOofScheduler.Core.Exceptions
         return exception.Body;
       }
 
-      return e.ToString().Replace(Environment.NewLine, "<br />");
+      return e.ToString();
     }
 
     public void EmailException(string messageBody)
     {
+      // We want a HTML body, so replace new lines with <br />
+      messageBody = messageBody.Replace(Environment.NewLine, "<br />");
+
       var mailMessage = mailMessageBuilder
         .WithSender(settings.UserEmail)
         .WithRecipient(settings.UserEmail)
