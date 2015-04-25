@@ -1,10 +1,6 @@
 ﻿using ExchangeOofScheduler.Core.Exchange;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace ExchangeOofScheduler.Core.Tests.Exchange
 {
@@ -18,7 +14,7 @@ namespace ExchangeOofScheduler.Core.Tests.Exchange
     [SetUp]
     public void Setup()
     {
-      this.fileReader = new FileReader();
+      fileReader = new FileReader();
     }
 
     [Test]
@@ -29,13 +25,17 @@ namespace ExchangeOofScheduler.Core.Tests.Exchange
       Assert.AreEqual("Test File", fileContents);
     }
 
+    /// <remarks>
+    /// We can't test this directly, as it isn't necessarily repeatable in all environments.
+    /// So, we pass in a full directory path and assert that this fails (which implies
+    /// it's looking for the file at that full path and not locally).
+    /// </remarks>
     [Test]
     public void GetFileContents_WithFullFilePath_DoesNotEditFilePath()
     {
-    }
+      const string fullFilename = @"N:\" + testFilename;
 
-    /* GetFileContents_WithRelativePath_ReadsFileInSameDirectory
-     * GetFileContents_WithFullFilePath_DoesNotEditFilePath
-     */
+      Assert.Throws<DirectoryNotFoundException>(() => fileReader.GetFileContents(fullFilename));
+    }
   }
 }
