@@ -10,9 +10,9 @@ using System;
 
 namespace ExchangeOofScheduler
 {
-  internal class Program
+  public class Program
   {
-    private static void Main()
+    public static void Main()
     {
       var kernel = SetupNinjectKernel();
       var isDebugMode = kernel.Get<ApplicationSettings>().DebugModeEnabled;

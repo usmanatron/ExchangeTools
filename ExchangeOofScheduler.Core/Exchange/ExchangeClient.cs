@@ -1,6 +1,7 @@
 ﻿using ExchangeOofScheduler.Core.Config;
 using Microsoft.Exchange.WebServices.Data;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Net.Mail;
 
@@ -11,6 +12,7 @@ namespace ExchangeOofScheduler.Core.Exchange
   ///   cannot fake easily). This has also been suppressed when generating Opencover reports
   /// </remarks>
   //ncrunch: no coverage start
+  [ExcludeFromCodeCoverage]
   public class ExchangeClient : IExchangeClient
   {
     private readonly ExchangeService exchangeService;
@@ -19,27 +21,27 @@ namespace ExchangeOofScheduler.Core.Exchange
     public ExchangeClient(IApplicationSettings settings)
     {
       this.settings = settings;
-      this.exchangeService = BuildService();
+      exchangeService = BuildService();
     }
 
     private ExchangeService BuildService()
     {
       var service = new ExchangeService { UseDefaultCredentials = true };
+      service.AutodiscoverUrl(settings.UserEmail, ValidateRedirectionUrl);
 
-      if (this.settings.DebugModeEnabled)
+      if (settings.DebugModeEnabled)
       {
         service.TraceEnabled = true;
         service.TraceFlags = TraceFlags.All;
       }
 
-      service.AutodiscoverUrl(this.settings.UserEmail, ValidateRedirectionUrl);
       return service;
     }
 
     /// <summary>
-    /// Validate the contents of the redirection URL. In this simple validation
-    /// callback, the redirection URL is considered valid if it is using HTTPS
-    /// to encrypt the authentication credentials.
+    /// Validate the contents of the redirection URL.
+    /// The redirection URL is considered valid if it is using HTTPS to encrypt
+    /// the authentication credentials.
     /// </summary>
     private bool ValidateRedirectionUrl(string redirectionUrl)
     {
