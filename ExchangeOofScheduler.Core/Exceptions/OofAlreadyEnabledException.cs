@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ExchangeOofScheduler.Core.Exceptions
 {
+  [Serializable]
   public class OofAlreadyEnabledException : Exception
   {
     private readonly OofSettings enabledOof;
