@@ -1,4 +1,5 @@
 ﻿using Microsoft.Exchange.WebServices.Data;
+using System.Net.Mail;
 
 namespace ExchangeOofScheduler.Core.Exchange
 {
@@ -8,6 +9,6 @@ namespace ExchangeOofScheduler.Core.Exchange
 
     void SetOofSettings(OofSettings oofSettings);
 
-    void SendEmailToSelf(string subject, string body);
+    void SendEmailToSelf(MailMessage mailMessage);
   }
 }

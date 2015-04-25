@@ -64,13 +64,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Builders\MailMessageBuilderTests.cs" />
     <Compile Include="Config\ApplicationSettingsTests.cs" />
     <Compile Include="Config\StringSettingsTestCase.cs" />
     <Compile Include="Dates\DateRangeCalculatorTests.cs" />
     <Compile Include="Entities\DateRangeTests.cs" />
     <Compile Include="Dates\DayOfWeekReaderTests.cs" />
     <Compile Include="Entities\TestClock.cs" />
-    <Compile Include="Exceptions\ExceptionNotifierTests.cs" />
+    <Compile Include="Exceptions\ExceptionHandlerTests.cs" />
     <Compile Include="Exchange\FileReaderTests.cs" />
     <Compile Include="Builders\OofSettingsBuilderTests.cs" />
     <Compile Include="Builders\OofScheduleBuilderTests.cs" />

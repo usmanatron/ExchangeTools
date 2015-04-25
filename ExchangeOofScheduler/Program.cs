@@ -30,7 +30,7 @@ namespace ExchangeOofScheduler
       var kernel = new StandardKernel();
       kernel.Bind<IClock>().To<SystemClock>();
       kernel.Bind<IApplicationSettings>().To<ApplicationSettings>();
-      kernel.Bind<IExceptionNotifier>().To<ExceptionNotifier>();
+      kernel.Bind<IExceptionHandler>().To<ExceptionHandler>();
       kernel.Bind<IOofSettingsBuilder>().To<OofSettingsBuilder>();
       kernel.Bind<IOofScheduleBuilder>().To<OofScheduleBuilder>();
       kernel.Bind<IFileReader>().To<FileReader>();

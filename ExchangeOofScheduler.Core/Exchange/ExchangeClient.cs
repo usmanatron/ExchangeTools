@@ -1,6 +1,8 @@
 ﻿using ExchangeOofScheduler.Core.Config;
 using Microsoft.Exchange.WebServices.Data;
 using System;
+using System.Linq;
+using System.Net.Mail;
 
 namespace ExchangeOofScheduler.Core.Exchange
 {
@@ -55,15 +57,17 @@ namespace ExchangeOofScheduler.Core.Exchange
       exchangeService.SetUserOofSettings(settings.UserEmail, oofSettings);
     }
 
-    public void SendEmailToSelf(string subject, string body)
+    public void SendEmailToSelf(MailMessage mailMessage)
     {
       var message = new EmailMessage(exchangeService)
               {
-                From = settings.UserEmail,
-                Subject = subject,
-                Body = new MessageBody(BodyType.HTML, body)
+                From = mailMessage.From.Address,
+                Subject = mailMessage.Subject,
+                Body = new MessageBody(BodyType.HTML, mailMessage.Body)
               };
-      message.ToRecipients.Add(settings.UserEmail);
+
+      message.ToRecipients.AddRange(
+        mailMessage.To.Select(recipient => new EmailAddress(recipient.DisplayName, recipient.Address)));
 
       message.Send();
     }

@@ -1,7 +1,6 @@
 ﻿using ExchangeOofScheduler.Core;
 using ExchangeOofScheduler.Core.Config;
 using ExchangeOofScheduler.Core.Exceptions;
-using ExchangeOofScheduler.Core.Exchange;
 using FakeItEasy;
 using NUnit.Framework;
 using System;
@@ -12,22 +11,22 @@ namespace ExchangeOofScheduler.Tests
   internal class OofSchedulerTests
   {
     private IOutOfOfficeSetter oofSetter;
-    private IExchangeClient exchangeClient;
+    private IExceptionHandler exceptionHandler;
+    private IApplicationSettings settings;
     private OofScheduler oofScheduler;
-    private IExceptionNotifier fakeExceptionNotifier;
 
     [SetUp]
     public void Setup()
     {
       oofSetter = A.Fake<IOutOfOfficeSetter>();
-      exchangeClient = A.Fake<IExchangeClient>();
-      fakeExceptionNotifier = A.Fake<IExceptionNotifier>();
+      exceptionHandler = A.Fake<IExceptionHandler>();
+      settings = A.Fake<IApplicationSettings>();
+      oofScheduler = new OofScheduler(oofSetter, exceptionHandler, settings);
     }
 
     [Test]
     public void NoException_SilentlySucceeds()
     {
-      oofScheduler = new OofScheduler(oofSetter, fakeExceptionNotifier);
       A.CallTo(() => oofSetter.SetOutOfOffice()).DoesNothing();
 
       oofScheduler.ScheduleOof();
@@ -38,24 +37,22 @@ namespace ExchangeOofScheduler.Tests
     [Test]
     public void Exception_TriggersExceptionHandler()
     {
-      oofScheduler = new OofScheduler(oofSetter, fakeExceptionNotifier);
       A.CallTo(() => oofSetter.SetOutOfOffice()).Throws<InvalidOperationException>();
 
       oofScheduler.ScheduleOof();
 
-      A.CallTo(() => fakeExceptionNotifier.HandleException(A<Exception>.Ignored)).WithAnyArguments().MustHaveHappened();
+      A.CallTo(() => exceptionHandler.EmailException(A<string>.Ignored)).WithAnyArguments().MustHaveHappened();
     }
 
     [Test]
-    public void Exception_SendsAnEmail()
+    public void DebugModeEnabled_WritesExceptionToConsole()
     {
-      var exceptionNotifier = new ExceptionNotifier(exchangeClient, A.Fake<IApplicationSettings>());
-      oofScheduler = new OofScheduler(oofSetter, exceptionNotifier);
-      A.CallTo(() => oofSetter.SetOutOfOffice()).Throws<InvalidOperationException>();
+      A.CallTo(() => oofSetter.SetOutOfOffice()).Throws<Exception>();
+      A.CallTo(() => settings.DebugModeEnabled).Returns(true);
 
       oofScheduler.ScheduleOof();
 
-      A.CallTo(() => exchangeClient.SendEmailToSelf(A<string>.Ignored, A<string>.Ignored)).MustHaveHappened();
+      A.CallTo(() => exceptionHandler.WriteExceptionToConsole(A<string>.Ignored)).MustHaveHappened();
     }
   }
 }

@@ -1,4 +1,5 @@
 ﻿using ExchangeOofScheduler.Core;
+using ExchangeOofScheduler.Core.Config;
 using ExchangeOofScheduler.Core.Exceptions;
 using System;
 
@@ -7,12 +8,14 @@ namespace ExchangeOofScheduler
   public class OofScheduler
   {
     private readonly IOutOfOfficeSetter oofSetter;
-    private readonly IExceptionNotifier oofSetterExceptionHandler;
+    private readonly IExceptionHandler exceptionHandler;
+    private readonly IApplicationSettings settings;
 
-    public OofScheduler(IOutOfOfficeSetter oofSetter, IExceptionNotifier oofSetterExceptionHandler)
+    public OofScheduler(IOutOfOfficeSetter oofSetter, IExceptionHandler exceptionHandler, IApplicationSettings settings)
     {
       this.oofSetter = oofSetter;
-      this.oofSetterExceptionHandler = oofSetterExceptionHandler;
+      this.exceptionHandler = exceptionHandler;
+      this.settings = settings;
     }
 
     public void ScheduleOof()
@@ -23,7 +26,14 @@ namespace ExchangeOofScheduler
       }
       catch (Exception exception)
       {
-        oofSetterExceptionHandler.HandleException(exception);
+        var messageBody = exceptionHandler.GetExceptionMessage(exception);
+
+        exceptionHandler.EmailException(messageBody);
+
+        if (settings.DebugModeEnabled)
+        {
+          exceptionHandler.WriteExceptionToConsole(messageBody);
+        }
       }
     }
   }
