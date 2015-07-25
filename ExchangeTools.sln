@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeTools.OofScheduler"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeTools.OofScheduler.Tests", "ExchangeTools.OofScheduler.Tests\ExchangeTools.OofScheduler.Tests.csproj", "{F9BA8DB0-9169-4652-B6A4-95B98E121A7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeTools.TestHelpers", "ExchangeTools.TestHelpers\ExchangeTools.TestHelpers.csproj", "{BCC6D275-93BF-49A1-9D97-42CD1BF3B15A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{F9BA8DB0-9169-4652-B6A4-95B98E121A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9BA8DB0-9169-4652-B6A4-95B98E121A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9BA8DB0-9169-4652-B6A4-95B98E121A7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCC6D275-93BF-49A1-9D97-42CD1BF3B15A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCC6D275-93BF-49A1-9D97-42CD1BF3B15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCC6D275-93BF-49A1-9D97-42CD1BF3B15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCC6D275-93BF-49A1-9D97-42CD1BF3B15A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

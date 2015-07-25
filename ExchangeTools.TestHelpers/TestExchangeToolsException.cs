@@ -1,10 +1,10 @@
 ﻿using ExchangeTools.Core.Exceptions;
 using System;
 
-namespace ExchangeTools.Core.Tests.Exceptions
+namespace ExchangeTools.TestHelpers
 {
   [Serializable]
-  internal class TestExchangeToolsException : ExchangeToolsException
+  public class TestExchangeToolsException : ExchangeToolsException
   {
     public const string ExceptionMessage = @"An out of office has already been set";
 

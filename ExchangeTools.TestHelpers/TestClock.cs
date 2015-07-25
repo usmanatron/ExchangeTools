@@ -1,9 +1,9 @@
-﻿using ExchangeTools.Core.Entities;
+﻿using ExchangeTools.Core;
 using System;
 
-namespace ExchangeTools.Core.Tests.Entities
+namespace ExchangeTools.TestHelpers
 {
-  internal class TestClock : IClock
+  public class TestClock : IClock
   {
     private readonly DateTime dateTime;
 

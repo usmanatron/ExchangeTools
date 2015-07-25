@@ -1,6 +1,6 @@
-﻿using ExchangeTools.Core.Exchange;
+﻿using ExchangeTools.Core;
+using ExchangeTools.OofScheduler;
 using ExchangeTools.OofScheduler.Builders;
-using ExchangeTools.OofScheduler.Exceptions;
 using Microsoft.Exchange.WebServices.Data;
 
 namespace ExchangeTools.OofScheduler

@@ -63,6 +63,9 @@
   <ItemGroup>
     <Compile Include="Builders\OofScheduleBuilderTests.cs" />
     <Compile Include="Builders\OofSettingsBuilderTests.cs" />
+    <Compile Include="Dates\DateRangeCalculatorTests.cs" />
+    <Compile Include="Dates\DayOfWeekReaderTests.cs" />
+    <Compile Include="Entities\DateRangeTests.cs" />
     <Compile Include="OofSchedulerTests.cs" />
     <Compile Include="OutOfOfficeSetterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +81,10 @@
     <ProjectReference Include="..\ExchangeTools.Core\ExchangeTools.Core.csproj">
       <Project>{0a85c88d-f9c8-458a-b376-289019f2a3b9}</Project>
       <Name>ExchangeTools.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExchangeTools.TestHelpers\ExchangeTools.TestHelpers.csproj">
+      <Project>{bcc6d275-93bf-49a1-9d97-42cd1bf3b15a}</Project>
+      <Name>ExchangeTools.TestHelpers</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

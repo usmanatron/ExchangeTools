@@ -1,5 +1,5 @@
-﻿using ExchangeTools.Core.Dates;
-using ExchangeTools.Core.Entities;
+﻿using ExchangeTools.OofScheduler.Dates;
+using ExchangeTools.OofScheduler.Entities;
 using System;
 
 namespace ExchangeTools.OofScheduler.Builders

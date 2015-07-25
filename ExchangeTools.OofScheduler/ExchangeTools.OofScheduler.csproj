@@ -52,7 +52,11 @@
   <ItemGroup>
     <Compile Include="Builders\OofScheduleBuilder.cs" />
     <Compile Include="Builders\OofSettingsBuilder.cs" />
-    <Compile Include="Exceptions\OofAlreadyEnabledException.cs" />
+    <Compile Include="Dates\DateRangeCalculator.cs" />
+    <Compile Include="Dates\DayOfWeekReader.cs" />
+    <Compile Include="Entities\DateRange.cs" />
+    <Compile Include="Entities\OofSchedule.cs" />
+    <Compile Include="OofAlreadyEnabledException.cs" />
     <Compile Include="OofScheduler.cs" />
     <Compile Include="OutOfOfficeSetter.cs" />
     <Compile Include="Program.cs" />

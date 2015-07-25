@@ -5,7 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Net.Mail;
 
-namespace ExchangeTools.Core.Exchange
+namespace ExchangeTools.Core
 {
   public interface IExchangeClient
   {

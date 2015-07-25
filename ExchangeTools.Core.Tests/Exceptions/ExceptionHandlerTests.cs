@@ -1,6 +1,7 @@
-﻿using ExchangeTools.Core.Config;
+﻿using ExchangeTools.Core;
+using ExchangeTools.Core.Config;
 using ExchangeTools.Core.Exceptions;
-using ExchangeTools.Core.Exchange;
+using ExchangeTools.TestHelpers;
 using FakeItEasy;
 using NUnit.Framework;
 using System.Net.Mail;

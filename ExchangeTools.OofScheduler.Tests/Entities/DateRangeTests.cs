@@ -1,4 +1,4 @@
-﻿using ExchangeTools.Core.Entities;
+﻿using ExchangeTools.OofScheduler.Entities;
 using NUnit.Framework;
 using System;
 

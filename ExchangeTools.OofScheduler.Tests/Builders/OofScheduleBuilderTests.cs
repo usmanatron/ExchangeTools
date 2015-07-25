@@ -1,5 +1,5 @@
-﻿using ExchangeTools.Core.Dates;
-using ExchangeTools.OofScheduler.Builders;
+﻿using ExchangeTools.OofScheduler.Builders;
+using ExchangeTools.OofScheduler.Dates;
 using FakeItEasy;
 using NUnit.Framework;
 using System;

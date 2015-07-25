@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExchangeTools.Core.Entities
+namespace ExchangeTools.OofScheduler.Entities
 {
   public class DateRange
   {

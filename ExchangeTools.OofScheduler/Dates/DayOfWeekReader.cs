@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExchangeTools.Core.Dates
+namespace ExchangeTools.OofScheduler.Dates
 {
   public interface IDayOfWeekReader
   {

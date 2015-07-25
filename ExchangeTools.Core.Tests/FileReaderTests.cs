@@ -1,8 +1,8 @@
-﻿using ExchangeTools.Core.Exchange;
+﻿using ExchangeTools.Core;
 using NUnit.Framework;
 using System.IO;
 
-namespace ExchangeTools.Core.Tests.Exchange
+namespace ExchangeTools.Core.Tests
 {
   [TestFixture]
   internal class FileReaderTests

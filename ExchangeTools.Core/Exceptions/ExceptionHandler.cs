@@ -1,5 +1,4 @@
 ﻿using ExchangeTools.Core.Config;
-using ExchangeTools.Core.Exchange;
 using System;
 
 namespace ExchangeTools.Core.Exceptions

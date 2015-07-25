@@ -1,8 +1,8 @@
-﻿using ExchangeTools.Core.Dates;
+﻿using ExchangeTools.OofScheduler.Dates;
 using NUnit.Framework;
 using System;
 
-namespace ExchangeTools.Core.Tests.Dates
+namespace ExchangeTools.OofScheduler.Tests.Dates
 {
   [TestFixture]
   internal class DayOfWeekReaderTests

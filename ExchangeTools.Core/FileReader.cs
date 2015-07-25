@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace ExchangeTools.Core.Exchange
+namespace ExchangeTools.Core
 {
   public interface IFileReader
   {

@@ -2,7 +2,7 @@
 using Microsoft.Exchange.WebServices.Data;
 using System;
 
-namespace ExchangeTools.OofScheduler.Exceptions
+namespace ExchangeTools.OofScheduler
 {
   [Serializable]
   public class OofAlreadyEnabledException : ExchangeToolsException

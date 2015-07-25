@@ -1,10 +1,12 @@
-﻿using ExchangeTools.Core.Dates;
-using ExchangeTools.Core.Entities;
+﻿using ExchangeTools.Core;
 using ExchangeTools.Core.Tests.Entities;
+using ExchangeTools.OofScheduler.Dates;
+using ExchangeTools.OofScheduler.Entities;
+using ExchangeTools.TestHelpers;
 using NUnit.Framework;
 using System;
 
-namespace ExchangeTools.Core.Tests.Dates
+namespace ExchangeTools.OofScheduler.Tests.Dates
 {
   [TestFixture]
   internal class DateRangeCalculatorTests

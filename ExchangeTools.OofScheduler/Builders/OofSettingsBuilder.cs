@@ -1,6 +1,6 @@
-﻿using ExchangeTools.Core.Config;
-using ExchangeTools.Core.Dates;
-using ExchangeTools.Core.Exchange;
+﻿using ExchangeTools.Core;
+using ExchangeTools.Core.Config;
+using ExchangeTools.OofScheduler.Dates;
 using Microsoft.Exchange.WebServices.Data;
 using System;
 

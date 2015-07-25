@@ -1,7 +1,8 @@
-﻿using ExchangeTools.Core.Entities;
+﻿using ExchangeTools.Core;
+using ExchangeTools.OofScheduler.Entities;
 using System;
 
-namespace ExchangeTools.Core.Dates
+namespace ExchangeTools.OofScheduler.Dates
 {
   public interface IDateRangeCalculator
   {

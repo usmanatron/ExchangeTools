@@ -1,8 +1,8 @@
-﻿using ExchangeTools.Core.Config;
-using ExchangeTools.Core.Dates;
-using ExchangeTools.Core.Entities;
-using ExchangeTools.Core.Exchange;
+﻿using ExchangeTools.Core;
+using ExchangeTools.Core.Config;
 using ExchangeTools.OofScheduler.Builders;
+using ExchangeTools.OofScheduler.Dates;
+using ExchangeTools.OofScheduler.Entities;
 using FakeItEasy;
 using Microsoft.Exchange.WebServices.Data;
 using NUnit.Framework;
