@@ -2,6 +2,11 @@
 
 namespace ExchangeTools.Core.Dates
 {
+  public interface IDayOfWeekReader
+  {
+    DayOfWeek Read(string input);
+  }
+
   public class DayOfWeekReader : IDayOfWeekReader
   {
     private const int expectedInputLength = 2;

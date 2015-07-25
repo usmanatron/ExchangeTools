@@ -7,6 +7,15 @@ using System.Net.Mail;
 
 namespace ExchangeTools.Core.Exchange
 {
+  public interface IExchangeClient
+  {
+    OofSettings GetOofSettings();
+
+    void SetOofSettings(OofSettings oofSettings);
+
+    void SendEmailToSelf(MailMessage mailMessage);
+  }
+
   /// <remarks>
   ///   Suppress NCrunch testing on this class, as it requires a connection to Exchange (which we currently
   ///   cannot fake easily). This has also been suppressed when generating Opencover reports

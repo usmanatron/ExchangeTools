@@ -5,6 +5,11 @@ using Microsoft.Exchange.WebServices.Data;
 
 namespace ExchangeTools.Core
 {
+  public interface IOutOfOfficeSetter
+  {
+    void SetOutOfOffice();
+  }
+
   /// <summary>
   /// Handles the actual setting of an out of office message
   /// </summary>

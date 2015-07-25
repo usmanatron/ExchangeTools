@@ -50,30 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builders\IMailMessageBuilder.cs" />
     <Compile Include="Builders\MailMessageBuilder.cs" />
     <Compile Include="Config\ApplicationConfiguration.cs" />
-    <Compile Include="Config\IConfiguration.cs" />
-    <Compile Include="Dates\IDateRangeCalculator.cs" />
-    <Compile Include="Dates\IDayOfWeekReader.cs" />
     <Compile Include="Exchange\FileReader.cs" />
-    <Compile Include="Exchange\IFileReader.cs" />
-    <Compile Include="Builders\IOofSettingsBuilder.cs" />
-    <Compile Include="Config\IApplicationSettings.cs" />
     <Compile Include="Entities\DateRange.cs" />
     <Compile Include="Dates\DateRangeCalculator.cs" />
     <Compile Include="Dates\DayOfWeekReader.cs" />
-    <Compile Include="Entities\IClock.cs" />
     <Compile Include="Entities\SystemClock.cs" />
     <Compile Include="Exchange\ExchangeClient.cs" />
     <Compile Include="Config\ApplicationSettings.cs" />
-    <Compile Include="Exchange\IExchangeClient.cs" />
     <Compile Include="Builders\OofSettingsBuilder.cs" />
-    <Compile Include="Exceptions\IExceptionHandler.cs" />
     <Compile Include="Exceptions\OofAlreadyEnabledException.cs" />
     <Compile Include="Exceptions\ExceptionHandler.cs" />
-    <Compile Include="Builders\IOofScheduleBuilder.cs" />
-    <Compile Include="IOutOfOfficeSetter.cs" />
     <Compile Include="Entities\OofSchedule.cs" />
     <Compile Include="OutOfOfficeSetter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

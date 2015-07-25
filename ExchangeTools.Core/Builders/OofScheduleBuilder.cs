@@ -4,6 +4,11 @@ using System;
 
 namespace ExchangeTools.Core.Builders
 {
+  public interface IOofScheduleBuilder
+  {
+    OofSchedule Build(string startDay, string startTime, string endDay, string endTime);
+  }
+
   public class OofScheduleBuilder : IOofScheduleBuilder
   {
     private readonly IDayOfWeekReader dayOfWeekReader;

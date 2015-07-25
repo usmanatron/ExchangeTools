@@ -6,6 +6,11 @@ using System;
 
 namespace ExchangeTools.Core.Builders
 {
+  public interface IOofSettingsBuilder
+  {
+    OofSettings Build();
+  }
+
   public class OofSettingsBuilder : IOofSettingsBuilder
   {
     private readonly OofSettings oofSettings;

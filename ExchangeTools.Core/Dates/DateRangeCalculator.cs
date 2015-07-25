@@ -3,6 +3,11 @@ using System;
 
 namespace ExchangeTools.Core.Dates
 {
+  public interface IDateRangeCalculator
+  {
+    DateRange CalculateNextDateRangeForOof(OofSchedule schedule);
+  }
+
   public class DateRangeCalculator : IDateRangeCalculator
   {
     private readonly IClock clock;
