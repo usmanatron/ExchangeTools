@@ -1,8 +1,8 @@
-﻿using ExchangeOofScheduler.Core.Exchange;
+﻿using ExchangeTools.Core.Exchange;
 using NUnit.Framework;
 using System.IO;
 
-namespace ExchangeOofScheduler.Core.Tests.Exchange
+namespace ExchangeTools.Core.Tests.Exchange
 {
   [TestFixture]
   internal class FileReaderTests

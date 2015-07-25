@@ -1,9 +1,9 @@
-﻿using ExchangeOofScheduler.Core.Builders;
-using ExchangeOofScheduler.Core.Config;
-using ExchangeOofScheduler.Core.Exchange;
+﻿using ExchangeTools.Core.Builders;
+using ExchangeTools.Core.Config;
+using ExchangeTools.Core.Exchange;
 using System;
 
-namespace ExchangeOofScheduler.Core.Exceptions
+namespace ExchangeTools.Core.Exceptions
 {
   /// <summary>
   /// Handles exceptions raised by OofSetter

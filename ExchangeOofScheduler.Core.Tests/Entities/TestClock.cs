@@ -1,7 +1,7 @@
-﻿using ExchangeOofScheduler.Core.Entities;
+﻿using ExchangeTools.Core.Entities;
 using System;
 
-namespace ExchangeOofScheduler.Core.Tests.Entities
+namespace ExchangeTools.Core.Tests.Entities
 {
   internal class TestClock : IClock
   {

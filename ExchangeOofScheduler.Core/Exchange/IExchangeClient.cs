@@ -1,7 +1,7 @@
 ﻿using Microsoft.Exchange.WebServices.Data;
 using System.Net.Mail;
 
-namespace ExchangeOofScheduler.Core.Exchange
+namespace ExchangeTools.Core.Exchange
 {
   public interface IExchangeClient
   {

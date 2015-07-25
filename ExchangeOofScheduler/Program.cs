@@ -1,10 +1,10 @@
-﻿using ExchangeOofScheduler.Core;
-using ExchangeOofScheduler.Core.Builders;
-using ExchangeOofScheduler.Core.Config;
-using ExchangeOofScheduler.Core.Dates;
-using ExchangeOofScheduler.Core.Entities;
-using ExchangeOofScheduler.Core.Exceptions;
-using ExchangeOofScheduler.Core.Exchange;
+﻿using ExchangeTools.Core;
+using ExchangeTools.Core.Builders;
+using ExchangeTools.Core.Config;
+using ExchangeTools.Core.Dates;
+using ExchangeTools.Core.Entities;
+using ExchangeTools.Core.Exceptions;
+using ExchangeTools.Core.Exchange;
 using Ninject;
 using System;
 

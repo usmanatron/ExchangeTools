@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ExchangeOofScheduler.Core.Config
+namespace ExchangeTools.Core.Config
 {
   public class ApplicationSettings : IApplicationSettings
   {

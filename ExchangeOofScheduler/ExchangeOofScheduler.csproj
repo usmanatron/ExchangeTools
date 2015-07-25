@@ -59,9 +59,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExchangeOofScheduler.Core\ExchangeOofScheduler.Core.csproj">
+    <ProjectReference Include="..\ExchangeOofScheduler.Core\ExchangeTools.Core.csproj">
       <Project>{0a85c88d-f9c8-458a-b376-289019f2a3b9}</Project>
-      <Name>ExchangeOofScheduler.Core</Name>
+      <Name>ExchangeTools.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

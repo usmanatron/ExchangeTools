@@ -1,10 +1,10 @@
-﻿using ExchangeOofScheduler.Core.Config;
-using ExchangeOofScheduler.Core.Dates;
-using ExchangeOofScheduler.Core.Exchange;
+﻿using ExchangeTools.Core.Config;
+using ExchangeTools.Core.Dates;
+using ExchangeTools.Core.Exchange;
 using Microsoft.Exchange.WebServices.Data;
 using System;
 
-namespace ExchangeOofScheduler.Core.Builders
+namespace ExchangeTools.Core.Builders
 {
   public class OofSettingsBuilder : IOofSettingsBuilder
   {

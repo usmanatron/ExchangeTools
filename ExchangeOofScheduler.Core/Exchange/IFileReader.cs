@@ -1,4 +1,4 @@
-﻿namespace ExchangeOofScheduler.Core.Exchange
+﻿namespace ExchangeTools.Core.Exchange
 {
   public interface IFileReader
   {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Exchange.WebServices.Data;
 
-namespace ExchangeOofScheduler.Core.Builders
+namespace ExchangeTools.Core.Builders
 {
   public interface IOofSettingsBuilder
   {

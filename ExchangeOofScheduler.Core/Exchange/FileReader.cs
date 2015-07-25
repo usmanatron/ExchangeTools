@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace ExchangeOofScheduler.Core.Exchange
+namespace ExchangeTools.Core.Exchange
 {
   public class FileReader : IFileReader
   {

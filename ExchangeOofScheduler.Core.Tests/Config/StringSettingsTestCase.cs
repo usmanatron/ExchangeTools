@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace ExchangeOofScheduler.Core.Tests.Config
+namespace ExchangeTools.Core.Tests.Config
 {
   internal class StringSettingsTestCase
   {

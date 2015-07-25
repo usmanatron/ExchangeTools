@@ -1,10 +1,10 @@
-﻿using ExchangeOofScheduler.Core.Config;
+﻿using ExchangeTools.Core.Config;
 using FakeItEasy;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 
-namespace ExchangeOofScheduler.Core.Tests.Config
+namespace ExchangeTools.Core.Tests.Config
 {
   [TestFixture]
   internal class ApplicationSettingsTests

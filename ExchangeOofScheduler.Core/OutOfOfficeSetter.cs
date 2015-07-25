@@ -1,9 +1,9 @@
-﻿using ExchangeOofScheduler.Core.Builders;
-using ExchangeOofScheduler.Core.Exceptions;
-using ExchangeOofScheduler.Core.Exchange;
+﻿using ExchangeTools.Core.Builders;
+using ExchangeTools.Core.Exceptions;
+using ExchangeTools.Core.Exchange;
 using Microsoft.Exchange.WebServices.Data;
 
-namespace ExchangeOofScheduler.Core
+namespace ExchangeTools.Core
 {
   /// <summary>
   /// Handles the actual setting of an out of office message

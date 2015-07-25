@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExchangeOofScheduler.Core.Exceptions
+namespace ExchangeTools.Core.Exceptions
 {
   public interface IExceptionHandler
   {

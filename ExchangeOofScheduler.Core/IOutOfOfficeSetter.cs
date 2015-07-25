@@ -1,4 +1,4 @@
-﻿namespace ExchangeOofScheduler.Core
+﻿namespace ExchangeTools.Core
 {
   public interface IOutOfOfficeSetter
   {

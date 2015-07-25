@@ -1,14 +1,14 @@
-﻿using ExchangeOofScheduler.Core.Builders;
-using ExchangeOofScheduler.Core.Config;
-using ExchangeOofScheduler.Core.Dates;
-using ExchangeOofScheduler.Core.Entities;
-using ExchangeOofScheduler.Core.Exchange;
+﻿using ExchangeTools.Core.Builders;
+using ExchangeTools.Core.Config;
+using ExchangeTools.Core.Dates;
+using ExchangeTools.Core.Entities;
+using ExchangeTools.Core.Exchange;
 using FakeItEasy;
 using Microsoft.Exchange.WebServices.Data;
 using NUnit.Framework;
 using System;
 
-namespace ExchangeOofScheduler.Core.Tests.Builders
+namespace ExchangeTools.Core.Tests.Builders
 {
   [TestFixture]
   internal class OofSettingsBuilderTests

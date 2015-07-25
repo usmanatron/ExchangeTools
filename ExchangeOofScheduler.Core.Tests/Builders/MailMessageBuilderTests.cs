@@ -1,9 +1,9 @@
-﻿using ExchangeOofScheduler.Core.Builders;
+﻿using ExchangeTools.Core.Builders;
 using NUnit.Framework;
 using System;
 using System.Linq;
 
-namespace ExchangeOofScheduler.Core.Tests.Builders
+namespace ExchangeTools.Core.Tests.Builders
 {
   [TestFixture]
   internal class MailMessageBuilderTests

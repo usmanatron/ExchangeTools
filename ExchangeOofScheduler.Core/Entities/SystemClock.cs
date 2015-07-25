@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExchangeOofScheduler.Core.Entities
+namespace ExchangeTools.Core.Entities
 {
   public class SystemClock : IClock
   {

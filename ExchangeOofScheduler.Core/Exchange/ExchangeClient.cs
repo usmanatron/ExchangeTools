@@ -1,11 +1,11 @@
-﻿using ExchangeOofScheduler.Core.Config;
+﻿using ExchangeTools.Core.Config;
 using Microsoft.Exchange.WebServices.Data;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Net.Mail;
 
-namespace ExchangeOofScheduler.Core.Exchange
+namespace ExchangeTools.Core.Exchange
 {
   /// <remarks>
   ///   Suppress NCrunch testing on this class, as it requires a connection to Exchange (which we currently

@@ -7,8 +7,8 @@
     <ProjectGuid>{0A85C88D-F9C8-458A-B376-289019F2A3B9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExchangeOofScheduler.Core</RootNamespace>
-    <AssemblyName>ExchangeOofScheduler.Core</AssemblyName>
+    <RootNamespace>ExchangeTools.Core</RootNamespace>
+    <AssemblyName>ExchangeTools.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -80,7 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builders\OofScheduleBuilder.cs" />
-    <None Include="ExchangeOofScheduler.Core.config">
+    <None Include="ExchangeTools.Core.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />

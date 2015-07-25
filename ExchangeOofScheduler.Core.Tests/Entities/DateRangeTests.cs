@@ -1,8 +1,8 @@
-﻿using ExchangeOofScheduler.Core.Entities;
+﻿using ExchangeTools.Core.Entities;
 using NUnit.Framework;
 using System;
 
-namespace ExchangeOofScheduler.Core.Tests.Entities
+namespace ExchangeTools.Core.Tests.Entities
 {
   [TestFixture]
   internal class DateRangeTests

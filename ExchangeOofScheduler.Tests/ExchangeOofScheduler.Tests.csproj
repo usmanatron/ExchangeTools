@@ -60,9 +60,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExchangeOofScheduler.Core\ExchangeOofScheduler.Core.csproj">
+    <ProjectReference Include="..\ExchangeOofScheduler.Core\ExchangeTools.Core.csproj">
       <Project>{0a85c88d-f9c8-458a-b376-289019f2a3b9}</Project>
-      <Name>ExchangeOofScheduler.Core</Name>
+      <Name>ExchangeTools.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\ExchangeOofScheduler\ExchangeOofScheduler.csproj">
       <Project>{5a644f30-968a-4c06-ab04-4464cea5ff2d}</Project>

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Net.Mail;
 
-namespace ExchangeOofScheduler.Core.Builders
+namespace ExchangeTools.Core.Builders
 {
   public class MailMessageBuilder : IMailMessageBuilder
   {

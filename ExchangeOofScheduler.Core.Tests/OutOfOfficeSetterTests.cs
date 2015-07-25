@@ -1,11 +1,11 @@
-﻿using ExchangeOofScheduler.Core.Builders;
-using ExchangeOofScheduler.Core.Exceptions;
-using ExchangeOofScheduler.Core.Exchange;
+﻿using ExchangeTools.Core.Builders;
+using ExchangeTools.Core.Exceptions;
+using ExchangeTools.Core.Exchange;
 using FakeItEasy;
 using Microsoft.Exchange.WebServices.Data;
 using NUnit.Framework;
 
-namespace ExchangeOofScheduler.Core.Tests
+namespace ExchangeTools.Core.Tests
 {
   [TestFixture]
   internal class OutOfOfficeSetterTests

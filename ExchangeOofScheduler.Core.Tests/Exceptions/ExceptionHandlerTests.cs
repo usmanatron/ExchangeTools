@@ -1,14 +1,14 @@
-﻿using ExchangeOofScheduler.Core.Builders;
-using ExchangeOofScheduler.Core.Config;
-using ExchangeOofScheduler.Core.Exceptions;
-using ExchangeOofScheduler.Core.Exchange;
+﻿using ExchangeTools.Core.Builders;
+using ExchangeTools.Core.Config;
+using ExchangeTools.Core.Exceptions;
+using ExchangeTools.Core.Exchange;
 using FakeItEasy;
 using Microsoft.Exchange.WebServices.Data;
 using NUnit.Framework;
 using System;
 using System.Net.Mail;
 
-namespace ExchangeOofScheduler.Core.Tests.Exceptions
+namespace ExchangeTools.Core.Tests.Exceptions
 {
   [TestFixture]
   internal class ExceptionHandlerTests

@@ -2,7 +2,7 @@
 using System.Configuration;
 using System.Linq;
 
-namespace ExchangeOofScheduler.Core.Config
+namespace ExchangeTools.Core.Config
 {
   public class ApplicationConfiguration : IConfiguration
   {

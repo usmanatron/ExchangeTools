@@ -1,6 +1,6 @@
-﻿using ExchangeOofScheduler.Core;
-using ExchangeOofScheduler.Core.Config;
-using ExchangeOofScheduler.Core.Exceptions;
+﻿using ExchangeTools.Core;
+using ExchangeTools.Core.Config;
+using ExchangeTools.Core.Exceptions;
 using FakeItEasy;
 using NUnit.Framework;
 using System;
