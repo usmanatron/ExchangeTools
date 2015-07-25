@@ -5,7 +5,7 @@ using FakeItEasy;
 using NUnit.Framework;
 using System;
 
-namespace ExchangeOofScheduler.Tests
+namespace ExchangeTools.OofScheduler.Tests
 {
   [TestFixture]
   internal class OofSchedulerTests

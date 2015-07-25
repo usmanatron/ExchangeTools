@@ -7,8 +7,8 @@
     <ProjectGuid>{5A644F30-968A-4C06-AB04-4464CEA5FF2D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExchangeOofScheduler</RootNamespace>
-    <AssemblyName>ExchangeOofScheduler</AssemblyName>
+    <RootNamespace>ExchangeTools.OofScheduler</RootNamespace>
+    <AssemblyName>OofScheduler</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -6,8 +6,8 @@
     <ProjectGuid>{F9BA8DB0-9169-4652-B6A4-95B98E121A7A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExchangeOofScheduler.Tests</RootNamespace>
-    <AssemblyName>ExchangeOofScheduler.Tests</AssemblyName>
+    <RootNamespace>ExchangeTools.OofScheduler.Tests</RootNamespace>
+    <AssemblyName>ExchangeTools.OofScheduler.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -60,9 +60,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExchangeOofScheduler\ExchangeOofScheduler.csproj">
+    <ProjectReference Include="..\ExchangeOofScheduler\ExchangeTools.OofScheduler.csproj">
       <Project>{5a644f30-968a-4c06-ab04-4464cea5ff2d}</Project>
-      <Name>ExchangeOofScheduler</Name>
+      <Name>ExchangeTools.OofScheduler</Name>
     </ProjectReference>
     <ProjectReference Include="..\ExchangeTools.Core\ExchangeTools.Core.csproj">
       <Project>{0a85c88d-f9c8-458a-b376-289019f2a3b9}</Project>

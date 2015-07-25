@@ -3,7 +3,7 @@ using ExchangeTools.Core.Config;
 using ExchangeTools.Core.Exceptions;
 using System;
 
-namespace ExchangeOofScheduler
+namespace ExchangeTools.OofScheduler
 {
   public class OofScheduler
   {

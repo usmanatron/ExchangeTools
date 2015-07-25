@@ -8,7 +8,7 @@ using ExchangeTools.Core.Exchange;
 using Ninject;
 using System;
 
-namespace ExchangeOofScheduler
+namespace ExchangeTools.OofScheduler
 {
   public class Program
   {
