@@ -60,7 +60,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExchangeOofScheduler\ExchangeTools.OofScheduler.csproj">
+    <ProjectReference Include="..\ExchangeTools.OofScheduler\ExchangeTools.OofScheduler.csproj">
       <Project>{5a644f30-968a-4c06-ab04-4464cea5ff2d}</Project>
       <Name>ExchangeTools.OofScheduler</Name>
     </ProjectReference>
