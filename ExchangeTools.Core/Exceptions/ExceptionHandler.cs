@@ -1,5 +1,4 @@
-﻿using ExchangeTools.Core.Builders;
-using ExchangeTools.Core.Config;
+﻿using ExchangeTools.Core.Config;
 using ExchangeTools.Core.Exchange;
 using System;
 
@@ -33,10 +32,11 @@ namespace ExchangeTools.Core.Exceptions
 
     public string GetExceptionMessage(Exception e)
     {
-      if (e is OofAlreadyEnabledException)
+      var exchangeToolsException = e as ExchangeToolsException;
+
+      if (exchangeToolsException != null)
       {
-        var exception = e as OofAlreadyEnabledException;
-        return exception.Body;
+        return exchangeToolsException.Body;
       }
 
       return e.ToString();

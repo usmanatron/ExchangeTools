@@ -4,7 +4,7 @@ using ExchangeTools.Core.Exchange;
 using Microsoft.Exchange.WebServices.Data;
 using System;
 
-namespace ExchangeTools.Core.Builders
+namespace ExchangeTools.OofScheduler.Builders
 {
   public interface IOofSettingsBuilder
   {

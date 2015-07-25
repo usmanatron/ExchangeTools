@@ -50,8 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builders\MailMessageBuilder.cs" />
     <Compile Include="Config\ApplicationConfiguration.cs" />
+    <Compile Include="Exceptions\ExchangeToolsException.cs" />
     <Compile Include="Exchange\FileReader.cs" />
     <Compile Include="Entities\DateRange.cs" />
     <Compile Include="Dates\DateRangeCalculator.cs" />
@@ -59,27 +59,16 @@
     <Compile Include="Entities\SystemClock.cs" />
     <Compile Include="Exchange\ExchangeClient.cs" />
     <Compile Include="Config\ApplicationSettings.cs" />
-    <Compile Include="Builders\OofSettingsBuilder.cs" />
-    <Compile Include="Exceptions\OofAlreadyEnabledException.cs" />
     <Compile Include="Exceptions\ExceptionHandler.cs" />
     <Compile Include="Entities\OofSchedule.cs" />
-    <Compile Include="OutOfOfficeSetter.cs" />
+    <Compile Include="MailMessageBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builders\OofScheduleBuilder.cs" />
     <None Include="ExchangeTools.Core.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ExternalReply.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InternalReply.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

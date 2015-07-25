@@ -1,9 +1,9 @@
-﻿using ExchangeTools.Core.Builders;
-using ExchangeTools.Core.Exceptions;
-using ExchangeTools.Core.Exchange;
+﻿using ExchangeTools.Core.Exchange;
+using ExchangeTools.OofScheduler.Builders;
+using ExchangeTools.OofScheduler.Exceptions;
 using Microsoft.Exchange.WebServices.Data;
 
-namespace ExchangeTools.Core
+namespace ExchangeTools.OofScheduler
 {
   public interface IOutOfOfficeSetter
   {

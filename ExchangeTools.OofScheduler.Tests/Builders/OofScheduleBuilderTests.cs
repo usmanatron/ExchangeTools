@@ -1,10 +1,10 @@
-﻿using ExchangeTools.Core.Builders;
-using ExchangeTools.Core.Dates;
+﻿using ExchangeTools.Core.Dates;
+using ExchangeTools.OofScheduler.Builders;
 using FakeItEasy;
 using NUnit.Framework;
 using System;
 
-namespace ExchangeTools.Core.Tests.Builders
+namespace ExchangeTools.OofScheduler.Tests.Builders
 {
   [TestFixture]
   internal class OofScheduleBuilderTests

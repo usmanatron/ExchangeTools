@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Net.Mail;
 
-namespace ExchangeTools.Core.Builders
+namespace ExchangeTools.Core
 {
-  public interface IMailMessageBuilder
+  public interface IMailMessageBuilder : IDisposable
   {
     IMailMessageBuilder WithSubject(string subject);
 
@@ -65,6 +65,20 @@ namespace ExchangeTools.Core.Builders
              !string.IsNullOrEmpty(mailMessage.Body) &&
              mailMessage.Sender != null &&
              mailMessage.To.Any();
+    }
+
+    public void Dispose()
+    {
+      Dispose(true);
+      GC.SuppressFinalize(this);
+    }
+
+    private void Dispose(bool disposing)
+    {
+      if (disposing)
+      {
+        mailMessage.Dispose();
+      }
     }
   }
 }

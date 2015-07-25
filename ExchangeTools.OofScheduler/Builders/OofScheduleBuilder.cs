@@ -2,7 +2,7 @@
 using ExchangeTools.Core.Entities;
 using System;
 
-namespace ExchangeTools.Core.Builders
+namespace ExchangeTools.OofScheduler.Builders
 {
   public interface IOofScheduleBuilder
   {

@@ -1,10 +1,11 @@
-﻿using Microsoft.Exchange.WebServices.Data;
+﻿using ExchangeTools.Core.Exceptions;
+using Microsoft.Exchange.WebServices.Data;
 using System;
 
-namespace ExchangeTools.Core.Exceptions
+namespace ExchangeTools.OofScheduler.Exceptions
 {
   [Serializable]
-  public class OofAlreadyEnabledException : Exception
+  public class OofAlreadyEnabledException : ExchangeToolsException
   {
     private readonly OofSettings enabledOof;
     private const string DateFormat = "ddd dd MMM yyyy HH:mm:ss";
@@ -14,7 +15,7 @@ namespace ExchangeTools.Core.Exceptions
       this.enabledOof = enabledOof;
     }
 
-    public string Body
+    public override string Body
     {
       get
       {

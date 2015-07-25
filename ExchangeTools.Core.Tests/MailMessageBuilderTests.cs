@@ -1,12 +1,11 @@
-﻿using ExchangeTools.Core.Builders;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System;
 using System.Linq;
 
-namespace ExchangeTools.Core.Tests.Builders
+namespace ExchangeTools.Core.Tests
 {
   [TestFixture]
-  internal class MailMessageBuilderTests
+  internal class MailMessageBuilderTests : IDisposable
   {
     private MailMessageBuilder mailMessageBuilder;
 
@@ -92,6 +91,20 @@ namespace ExchangeTools.Core.Tests.Builders
       Assert.AreEqual(Body, message.Body);
       Assert.AreEqual(From, message.Sender.Address);
       Assert.AreEqual(To, message.To.Single().Address);
+    }
+
+    public void Dispose()
+    {
+      Dispose(true);
+      GC.SuppressFinalize(this);
+    }
+
+    private void Dispose(bool disposing)
+    {
+      if (disposing)
+      {
+        mailMessageBuilder.Dispose();
+      }
     }
   }
 }

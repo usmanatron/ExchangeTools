@@ -1,11 +1,8 @@
-﻿using ExchangeTools.Core.Builders;
-using ExchangeTools.Core.Config;
+﻿using ExchangeTools.Core.Config;
 using ExchangeTools.Core.Exceptions;
 using ExchangeTools.Core.Exchange;
 using FakeItEasy;
-using Microsoft.Exchange.WebServices.Data;
 using NUnit.Framework;
-using System;
 using System.Net.Mail;
 
 namespace ExchangeTools.Core.Tests.Exceptions
@@ -33,17 +30,11 @@ namespace ExchangeTools.Core.Tests.Exceptions
     [Test]
     public void OofAlreadyEnabledException_RendersSpecialMessageFromException()
     {
-      const string expectedExceptionPrefix = @"An out of office is already set";
-      var exampleOofSettings = new OofSettings
-                               {
-                                 InternalReply = "internal",
-                                 ExternalReply = "external",
-                                 Duration = new TimeWindow(DateTime.Now.AddDays(-1), DateTime.Now.AddDays(1))
-                               };
+      var exception = new TestExchangeToolsException();
 
-      var body = exceptionHandler.GetExceptionMessage(new OofAlreadyEnabledException(exampleOofSettings));
+      var body = exceptionHandler.GetExceptionMessage(exception);
 
-      StringAssert.StartsWith(expectedExceptionPrefix, body);
+      StringAssert.StartsWith(TestExchangeToolsException.ExceptionMessage, body);
     }
 
     [Test]

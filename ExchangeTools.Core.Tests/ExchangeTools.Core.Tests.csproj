@@ -64,7 +64,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Builders\MailMessageBuilderTests.cs" />
+    <Compile Include="MailMessageBuilderTests.cs" />
     <Compile Include="Config\ApplicationSettingsTests.cs" />
     <Compile Include="Config\StringSettingsTestCase.cs" />
     <Compile Include="Dates\DateRangeCalculatorTests.cs" />
@@ -72,10 +72,8 @@
     <Compile Include="Dates\DayOfWeekReaderTests.cs" />
     <Compile Include="Entities\TestClock.cs" />
     <Compile Include="Exceptions\ExceptionHandlerTests.cs" />
+    <Compile Include="Exceptions\TestExchangeToolsException.cs" />
     <Compile Include="Exchange\FileReaderTests.cs" />
-    <Compile Include="Builders\OofSettingsBuilderTests.cs" />
-    <Compile Include="Builders\OofScheduleBuilderTests.cs" />
-    <Compile Include="OutOfOfficeSetterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
